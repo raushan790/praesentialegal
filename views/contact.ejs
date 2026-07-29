@@ -1,0 +1,87 @@
+<%- include('partials/head', { title: title, description: 'Get in touch with Praesentia. Schedule a consultation to explore how our fractional General Counsel model can support your growth-stage business.' }) %>
+<%- include('partials/nav') %>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="page-hero">
+  <div class="container">
+    <span class="eyebrow center" data-reveal>Let's Connect</span>
+    <h1 data-reveal data-reveal-delay="1">Your Internal Legal Department.<br>Without the Overhead of Building One.</h1>
+    <p data-reveal data-reveal-delay="2">Proactive legal leadership, structured operational excellence, and flexible business-aligned partnership built specifically to scale with growth-stage companies.</p>
+  </div>
+</header>
+
+<!-- ===== CONTACT ===== -->
+<section class="section-sm">
+  <div class="container">
+    <div class="split" style="max-width:1000px;margin:0 auto;gap:var(--sp-8)">
+      <!-- Form -->
+      <div data-reveal>
+        <h2 style="font-family:var(--ff-serif);font-size:1.8rem;margin-bottom:var(--sp-5)">Schedule a Consultation</h2>
+        <% if (typeof submitted !== 'undefined' && submitted) { %>
+          <div class="form-success">✓ Thank you — we'll be in touch within one business day.</div>
+        <% } %>
+        <form action="/contact" method="POST" autocomplete="on" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" required placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" required placeholder="Doe">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" required placeholder="jane@company.com">
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Inc.">
+          </div>
+          <div class="form-group">
+            <label for="interest">Area of Interest</label>
+            <select id="interest" name="interest">
+              <option value="">Select an engagement model…</option>
+              <% services.forEach(s => { %><option><%= s.title %></option><% }); %>
+              <option>Not sure yet — general inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" placeholder="Tell us about your business, your legal needs, and where you're headed…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+          <p class="form-note">We'll respond within one business day. Your information is kept strictly confidential.</p>
+        </form>
+      </div>
+
+      <!-- Info -->
+      <div data-reveal data-reveal-delay="2">
+        <div class="card" style="padding:var(--sp-7);margin-bottom:var(--sp-5)">
+          <h3 style="font-family:var(--ff-serif);font-size:1.4rem;margin-bottom:var(--sp-5)">Our Mandate</h3>
+          <p style="color:var(--c-text-soft);margin-bottom:var(--sp-4)">"We don't just point out legal risks. We engineer commercial pathways to help you move past them and close deals."</p>
+          <p style="color:var(--c-text-soft)">We build legal functions that operate with corporate-grade precision while maintaining seed-stage velocity and nimbleness.</p>
+        </div>
+        <div class="card" style="padding:var(--sp-7);margin-bottom:var(--sp-5)">
+          <h3 style="font-family:var(--ff-serif);font-size:1.4rem;margin-bottom:var(--sp-5)">Get in Touch</h3>
+          <div style="display:flex;flex-direction:column;gap:var(--sp-4)">
+            <div style="display:flex;gap:14px;align-items:center"><span style="font-size:1.4rem">✉️</span><div><div style="font-size:.8rem;color:var(--c-text-soft);text-transform:uppercase;letter-spacing:.08em">Email</div><a href="mailto:<%= site.email %>" style="font-weight:600"><%= site.email %></a></div></div>
+            <div style="display:flex;gap:14px;align-items:center"><span style="font-size:1.4rem">🌐</span><div><div style="font-size:.8rem;color:var(--c-text-soft);text-transform:uppercase;letter-spacing:.08em">Website</div><a href="<%= site.url %>" style="font-weight:600">praesentia.legal</a></div></div>
+            <div style="display:flex;gap:14px;align-items:center"><span style="font-size:1.4rem;font-weight:700">in</span><div><div style="font-size:.8rem;color:var(--c-text-soft);text-transform:uppercase;letter-spacing:.08em">LinkedIn</div><a href="<%= site.linkedin %>" target="_blank" rel="noopener" style="font-weight:600">Connect with us</a></div></div>
+          </div>
+        </div>
+        <div class="card" style="padding:var(--sp-7);background:var(--gradient-dark);color:var(--c-text-inv);border:0">
+          <h3 style="font-family:var(--ff-serif);font-size:1.4rem;margin-bottom:var(--sp-4);color:var(--c-text-inv)">Active Jurisdictions</h3>
+          <div style="display:flex;gap:var(--sp-5);flex-wrap:wrap">
+            <div><div style="font-size:2rem">🇺🇸</div><div style="font-size:.85rem;color:var(--c-text-inv-soft);margin-top:6px">United States</div></div>
+            <div><div style="font-size:2rem">🇮🇳</div><div style="font-size:.85rem;color:var(--c-text-inv-soft);margin-top:6px">India</div></div>
+            <div><div style="font-size:2rem">🕌</div><div style="font-size:.85rem;color:var(--c-text-inv-soft);margin-top:6px">West Asia</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

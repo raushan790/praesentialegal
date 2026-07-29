@@ -1,0 +1,81 @@
+<%- include('partials/head', { title: title, description: 'Meet the Praesentia leadership team — experienced in-house counsel and proven operators with 30+ combined years across corporate, high-tech, and commercial legal practice.' }) %>
+<%- include('partials/nav') %>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="page-hero">
+  <div class="container">
+    <span class="eyebrow center" data-reveal>Leadership Team</span>
+    <h1 data-reveal data-reveal-delay="1">Experienced In-House Counsel.<br>Proven Operators.</h1>
+    <p data-reveal data-reveal-delay="2">Over 30 combined years of corporate, high-tech, and commercial legal experience inside scale-ups and enterprises.</p>
+  </div>
+</header>
+
+<!-- ===== TEAM ===== -->
+<section class="section-sm">
+  <div class="container">
+    <div class="grid grid-2" style="max-width:900px;margin:0 auto;gap:var(--sp-7)">
+      <% team.forEach((member, idx) => { %>
+        <div class="team-card" data-reveal data-reveal-delay="<%= idx + 1 %>">
+          <div class="team-photo">
+            <div class="pattern"></div>
+            <div class="glow"></div>
+            <img src="/img/<%= member.photo %>" alt="<%= member.name %>" class="team-img">
+            <div class="initials"><%= member.initials %></div>
+          </div>
+          <div class="team-info">
+            <h3><%= member.name %></h3>
+            <div class="role"><%= member.role %></div>
+            <ul>
+              <% member.bio.forEach(b => { %><li><%= b %></li><% }); %>
+            </ul>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+    <div style="max-width:720px;margin:var(--sp-8) auto 0;text-align:center" data-reveal>
+      <p class="quote-block dark-quote" style="font-size:1.3rem">"Over 30+ combined years of corporate, high-tech, and commercial legal experience inside scale-ups and enterprises."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHILOSOPHY ===== -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="split">
+      <div data-reveal>
+        <span class="eyebrow">Our Philosophy</span>
+        <h2 class="section-title">Legal advice is only part of the solution.</h2>
+        <p class="section-sub" style="margin-top:var(--sp-5)">Practical execution inside the business creates value. We don't just point out legal risks — we engineer commercial pathways to help you move past them and close deals.</p>
+        <p style="margin-top:var(--sp-4);color:var(--c-text-soft)">We build legal functions that operate with corporate-grade precision while maintaining seed-stage velocity and nimbleness. Our clients scale faster, stay highly compliant, and secure better transactional outcomes.</p>
+      </div>
+      <div data-reveal data-reveal-delay="2">
+        <div class="card" style="padding:var(--sp-7)">
+          <h3 style="font-family:var(--ff-serif);font-size:1.6rem;margin-bottom:var(--sp-5)">What Sets Us Apart</h3>
+          <% const apart = [
+            {t:'Executive boardroom integration',d:'We sit alongside your leadership team, not behind a help desk.'},
+            {t:'Proactive, not reactive',d:'We anticipate risks before they become problems — and unblock deals.'},
+            {t:'AI-enabled & process-driven',d:'CLM tools, automation workflows, and clear metrics reporting.'},
+            {t:'Predictable pricing',d:'Flat-fee retainers — no surprise hourly bills.'}
+          ]; apart.forEach(a => { %>
+            <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:var(--sp-4)">
+              <span style="color:var(--c-accent);font-size:1.3rem;flex-shrink:0">✓</span>
+              <div><strong><%= a.t %></strong><br><span style="color:var(--c-text-soft);font-size:.92rem"><%= a.d %></span></div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="container">
+    <h2 data-reveal>Ready to work with a partner who sits inside your business?</h2>
+    <div data-reveal data-reveal-delay="2">
+      <a href="/contact" class="btn btn-primary">Schedule a Consultation</a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,101 @@
+<%- include('partials/head', { title: title, description: 'Fractional General Counsel, Managed Legal Services, Project-Based Support, and Legal Recruitment — flexible, business-centered engagement models engineered around your strategic roadmap.' }) %>
+<%- include('partials/nav') %>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="page-hero">
+  <div class="container">
+    <span class="eyebrow center" data-reveal>Our Service Delivery</span>
+    <h1 data-reveal data-reveal-delay="1">Flexible, Business-Centered<br>Engagement Models</h1>
+    <p data-reveal data-reveal-delay="2">Unlike rigid hourly firms, we structure our work around your operational needs — predictable pricing and integrated, daily strategic legal support. Engagements engineered precisely around your strategic roadmap and business scale.</p>
+  </div>
+</header>
+
+<!-- ===== SERVICES ===== -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="gap:var(--sp-7)">
+      <% services.forEach((s, idx) => { %>
+        <div class="card svc-card" id="<%= s.id %>" data-reveal data-reveal-delay="<%= (idx % 2) + 1 %>" style="min-height:340px">
+          <span class="badge"><%= s.badge %></span>
+          <h3><%= s.title %></h3>
+          <p><%= s.desc %></p>
+          <ul>
+            <% s.points.forEach(p => { %><li><%= p %></li><% }); %>
+          </ul>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GLOBAL REACH ===== -->
+<section class="section bg-dark">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow light center">Global Reach</span>
+      <h2 class="section-title">Global Perspective. Local Execution.</h2>
+      <p class="section-sub" style="margin-left:auto;margin-right:auto">Cross-border business operations carry massive compliance overhead. We act as your single strategic point of contact to run multi-jurisdictional frameworks.</p>
+    </div>
+    <div class="world-grid" data-reveal data-reveal-delay="1">
+      <% const jurisdictions = [
+        {flag:'🇺🇸',name:'United States',items:[['Contracts:','Multi-state commercial agreements'],['Compliance:','Federal & state regulatory frameworks'],['Employment:','At-will & contractor structures'],['Corporate:','Entity formation & governance']]},
+        {flag:'🇮🇳',name:'India',items:[['Contracts:','Commercial & tech agreements'],['Compliance:','Companies Act, data privacy'],['Employment:','Labour law & EOR setups'],['Corporate:','FDI & cross-border structuring']]},
+        {flag:'🕌',name:'West Asia (UAE)',items:[['Contracts:','Multi-currency commercial agreements'],['Compliance:','Mainland & free zone frameworks'],['Employment:','Labour law & sponsorship rules'],['Corporate:','Entity setup & inter-company agreements']]}
+      ]; jurisdictions.forEach(j => { %>
+        <div class="jurisdiction">
+          <div class="flag"><%= j.flag %></div>
+          <h4><%= j.name %></h4>
+          <ul>
+            <% j.items.forEach(([label,desc]) => { %>
+              <li><strong><%= label %></strong> <%= desc %></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% }); %>
+    </div>
+    <div style="max-width:800px;margin:var(--sp-8) auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-5)" data-reveal data-reveal-delay="2">
+      <% const crossBorder = [
+        ['Cross-Border Contracts','Multi-currency commercial agreements and standard data privacy clauses.'],
+        ['Global Workforce','Compliance screening for global remote teams, local labor rules, and EOR contract setups.'],
+        ['Expansion Support','Structuring regional entities and managing inter-company legal agreements.'],
+        ['Multi-Jurisdiction Compliance','Reconciling local corporate, data privacy, employment laws seamlessly.']
+      ]; crossBorder.forEach(([t,d]) => { %>
+        <div style="padding:var(--sp-5);border:1px solid var(--c-line-dark);border-radius:var(--radius)">
+          <h4 style="color:var(--c-accent-2);font-size:1rem;margin-bottom:var(--sp-2)"><%= t %></h4>
+          <p style="color:var(--c-text-inv-soft);font-size:.9rem"><%= d %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VALUE PROPS ===== -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow center">Why Choose Praesentia</span>
+      <h2 class="section-title">Why Sophisticated Leaders Choose Us</h2>
+    </div>
+    <div class="grid grid-4">
+      <% valueProps.forEach((vp, idx) => { %>
+        <div class="card" data-reveal data-reveal-delay="<%= (idx % 4) + 1 %>">
+          <div class="icon"><%= vp.icon %></div>
+          <h3><%= vp.title %></h3>
+          <p><%= vp.desc %></p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="container">
+    <p class="quote-block" data-reveal>"Engagements engineered precisely around your strategic roadmap and business scale."</p>
+    <div data-reveal data-reveal-delay="2" style="margin-top:var(--sp-6)">
+      <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

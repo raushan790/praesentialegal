@@ -1,0 +1,44 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="logo"><img src="/img/logo.png" alt="<%= site.fullName %>" width="180" height="180"></a>
+        <p><%= site.tagline %>. Your internal legal department — without the overhead of building one. Serving the United States, India &amp; West Asia.</p>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <ul>
+          <% nav.forEach(item => { %>
+            <li><a href="<%= item.href %>"><%= item.label %></a></li>
+          <% }); %>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <% services.forEach(s => { %>
+            <li><a href="/services#<%= s.id %>"><%= s.title %></a></li>
+          <% }); %>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="mailto:<%= site.email %>"><%= site.email %></a></li>
+          <li><a href="<%= site.linkedin %>" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="/contact">Schedule a Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <%= site.year %> <%= site.fullName %>. All rights reserved.</span>
+      <div class="social">
+        <a href="<%= site.linkedin %>" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="mailto:<%= site.email %>" aria-label="Email">✉</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
