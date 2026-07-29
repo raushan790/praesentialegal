@@ -29,8 +29,8 @@ const siteData = {
     fullName: 'Praesentia Legal Solutions',
     tagline: 'Strategic Legal Partners for Growth-Focused Businesses',
     description: 'Embedded fractional General Counsel for founders, executive teams, and growing businesses — bridging the gap between expensive law firms and full-time in-house counsel across the US, India & West Asia.',
-    url: 'https://praesentia.legal',
-    email: 'hello@praesentia.legal',
+    url: 'https://praesentialegal.com',
+    email: 'hello@praesentialegal.com',
     linkedin: 'https://www.linkedin.com',
     year: new Date().getFullYear(),
     jurisdictions: ['🇺🇸 United States', '🇮🇳 India', '🕌 West Asia (UAE)']
