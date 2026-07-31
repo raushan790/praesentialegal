@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" fill="none">
+  <defs>
+    <!-- Premium Metallic Gold Gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8930e"/>
+      <stop offset="30%" stop-color="#f3d76e"/>
+      <stop offset="70%" stop-color="#c9a227"/>
+      <stop offset="100%" stop-color="#917005"/>
+    </linearGradient>
+
+    <!-- Google Fonts Import inside SVG -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&amp;family=Inter:wght@700&amp;display=swap');
+      
+      .brand-title {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        font-weight: 700;
+        fill: url(#goldGradient);
+      }
+      .brand-subtitle {
+        font-family: 'Inter', -apple-system, sans-serif;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .monogram-p {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        fill: url(#goldGradient);
+      }
+      .monogram-l {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 800;
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+
+  <!-- Left Side: Monogram PL Logo Mark -->
+  <g transform="translate(10, 5)">
+    <!-- Monogram L (in background, white) -->
+    <text x="36" y="92" font-size="82" class="monogram-l">L</text>
+    
+    <!-- Monogram P (in foreground, gold) -->
+    <text x="12" y="78" font-size="84" class="monogram-p">P</text>
+    
+    <!-- Golden Accent Line inside Monogram P/L stem -->
+    <rect x="29" y="24" width="3" height="54" fill="url(#goldGradient)" rx="1.5"/>
+
+    <!-- Dynamic Swoosh / Crescent Underneath (White) -->
+    <path d="M 8 92 C 16 108, 48 114, 82 92" stroke="#ffffff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Accent Thin Swoosh (Gold) -->
+    <path d="M 16 98 C 28 112, 54 116, 88 84" stroke="url(#goldGradient)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Small Diamond/Star Accent near top right of monogram -->
+    <path d="M 88 28 L 92 32 L 88 36 L 84 32 Z" fill="url(#goldGradient)"/>
+  </g>
+
+  <!-- Right Side: Brand Wordmark -->
+  <!-- "PRAESENTIA" Wordmark (Golden Serif) -->
+  <text x="135" y="64" font-size="44" class="brand-title" letter-spacing="4.5">PRAESENTIA</text>
+
+  <!-- Decorative Separator Lines and "LEGAL" Text -->
+  <g transform="translate(0, 4)">
+    <!-- Left Horizontal Line (White) -->
+    <line x1="135" y1="88" x2="225" y2="88" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    
+    <!-- "LEGAL" Subtext (Spaced Sans-Serif) -->
+    <text x="242" y="95" font-size="20" class="brand-subtitle" letter-spacing="10">LEGAL</text>
+    
+    <!-- Right Horizontal Line (White) -->
+    <line x1="365" y1="88" x2="455" y2="88" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  </g>
+</svg>

@@ -24,48 +24,140 @@
   </div>
 </section>
 
-<!-- ===== RESULTS TIMELINE ===== -->
-<section class="section">
-  <div class="container-narrow">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow center">Our Impact</span>
-      <h2 class="section-title">Building Legal Functions That Create Value</h2>
+<!-- ===== COMPARISON TABLE (PRAESENTIA ADVANTAGE) ===== -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="result-header" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0; color:var(--c-teal);">The Praesentia Advantage</span>
     </div>
-    <div class="timeline" style="margin-top:var(--sp-7)">
-      <% const results = [
-        {h:'Built Legal Functions From The Ground Up',d:'Structuring templates, playbooks, policies, and cross-functional legal workflows. We eliminate founder dependency on contract drafting and routine approvals — turning legal from a blocker into a sales enabler.'},
-        {h:'Supported Multi-Jurisdiction Operations',d:'Setting up and running legal frameworks across the US, India, and West Asia. Ensuring seamless global expansion, corporate governance, and multi-currency structuring.'},
-        {h:'Designed Scalable Legal Operations',d:'Introducing Contract Lifecycle Management (CLM) tools, automation workflows, and clear metrics reporting. Drastically reducing turnaround times for sales contracts.'},
-        {h:'Enabled Growth Through Legal Infrastructure',d:'Unlocking transactional speed and ensuring compliance that keeps the board and institutional investors fully aligned. We turn legal from a blocker to a sales enabler.'}
-      ]; results.forEach((r, idx) => { %>
-        <div class="timeline-item" data-reveal data-reveal-delay="<%= idx + 1 %>">
-          <h4><%= r.h %></h4>
-          <p><%= r.d %></p>
-        </div>
-      <% }); %>
+    
+    <h2 class="section-title" data-reveal data-reveal-delay="1" style="margin-top: var(--sp-4); margin-bottom: var(--sp-6);">
+      Not Another Law Firm: <span style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent);">A New Operating Paradigm</span>
+    </h2>
+    
+    <div data-reveal data-reveal-delay="2" class="cmp-wrap" style="box-shadow: var(--shadow-lg);">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Traditional Law Firm</th>
+            <th>Internal Legal Team (Full-Time)</th>
+            <th style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); font-weight: 700;">Praesentia Fractional Partner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% 
+            const compRows = [
+              { dim: 'Engagement Model', trad: 'Matter-based support (reactive ticket desks)', intl: 'High fixed cost, recruitment delays, overhead', praes: 'Flexible engagement, rapid virtual scale-up' },
+              { dim: 'Strategic Execution', trad: 'Reactive, risk-averse legal analysis only', intl: 'Internal capacity limitations, backlog risk', praes: 'Proactive, strategic commercial partner' },
+              { dim: 'Operational Focus', trad: 'Legal-only silo (no process engineering)', intl: 'Internal focus with resource constraints', praes: 'Integrated Legal + Business Operations' },
+              { dim: 'Billing Structure', trad: 'Unpredictable, high-cost hourly billing', intl: 'High full-time salaries and benefits', praes: 'Scalable model, predictable flat-fee retainer' },
+              { dim: 'Tech & Tool Stack', trad: 'Legacy, proprietary software focus', intl: 'Limited budget & training bandwidth', praes: 'AI implementation & CLM expertise' }
+            ];
+            compRows.forEach(r => { 
+          %>
+            <tr>
+              <td data-label="Dimension" style="font-weight: 700;"><%= r.dim %></td>
+              <td data-label="Traditional"><%= r.trad %></td>
+              <td data-label="Internal"><%= r.intl %></td>
+              <td data-label="Praesentia" style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); font-weight: 600;"><%= r.praes %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
     </div>
-    <div style="text-align:center;margin-top:var(--sp-8)" data-reveal>
-      <p class="quote-block dark-quote" style="font-size:1.3rem">"By establishing professional infrastructure, we prepare growth-stage organizations for next-stage scale."</p>
+    
+    <div style="text-align:center; margin-top:var(--sp-7);" data-reveal>
+      <p class="quote-center" style="font-size:1.30rem; color:var(--c-text); font-family:var(--ff-serif); font-style:italic; font-weight:600;">
+        "Legal support is only part of the solution. Practical execution inside the business creates value."
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ===== IMPACT AREAS ===== -->
-<section class="section bg-alt">
+<!-- ===== IMPACT AREAS (WHERE WE CREATE IMMEDIATE IMPACT) ===== -->
+<section class="section">
   <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow center">Where We Create Immediate Impact</span>
-      <h2 class="section-title">Six Areas of Immediate Value</h2>
+    <div class="result-header" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0; color:var(--c-teal);">Our Impact Area</span>
     </div>
-    <div class="grid grid-3">
-      <% impactAreas.forEach((area, idx) => { %>
-        <div class="card" data-reveal data-reveal-delay="<%= (idx % 3) + 1 %>">
-          <span class="num-tag"><%= area.num %></span>
-          <div class="icon"><%= area.icon %></div>
-          <h3><%= area.title %></h3>
-          <p><strong>Problem:</strong> <%= area.problem %>.<br><strong>Solution:</strong> <%= area.solution %></p>
+    
+    <h2 class="section-title" data-reveal data-reveal-delay="1" style="margin-top: var(--sp-4); margin-bottom: var(--sp-6);">
+      Where We Create <span style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent);">Immediate Impact</span>
+    </h2>
+    
+    <div class="grid grid-3" style="gap: var(--sp-5);">
+      <% 
+        const impactCards = [
+          { num: '01', category: 'Revenue Velocity', title: 'Slow Commercial Contracting', solution: 'End-to-end contract acceleration, standardized SLA-driven playbooks, and modern AI screening protocols.' },
+          { num: '02', category: 'Strategic Vacuum', title: 'Lack of In-House Leadership', solution: 'Fractional General Counsel leading board meetings, financing, corporate governance, and scaling strategies.', highlight: true },
+          { num: '03', category: 'Risk Management', title: 'Compliance Pressure', solution: 'Designing custom regional & international regulatory frameworks that scale cleanly with operations.' },
+          { num: '04', category: 'Global Expansion', title: 'Scaling Globally', solution: 'Seamless cross-border support structuring, workforce advisory, and international legal setup.' },
+          { num: '05', category: 'Team Overload', title: 'Legal Team Overload', solution: 'Managed legal ops, removing routine backlogs and letting internal teams focus on major transactions.' },
+          { num: '06', category: 'Governance Control', title: 'Investor Expectations', solution: 'Bulletproof compliance & governance standards designed to ace strict institutional DD.' }
+        ];
+        impactCards.forEach((card, idx) => { 
+      %>
+        <div class="card" data-reveal data-reveal-delay="<%= (idx % 3) + 1 %>" style="<%= card.highlight ? 'border-top: 4px solid var(--c-accent);' : '' %> padding: var(--sp-6);">
+          <span style="display: block; font-size: 0.78rem; font-weight: 700; background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--sp-2);">
+            <%= card.num %> · <%= card.category %>
+          </span>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: var(--sp-4); color: var(--c-text);"><%= card.title %></h3>
+          <p style="font-size: 0.92rem; color: var(--c-text-soft); line-height: 1.6;">
+            <strong style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent);">Solution:</strong> <%= card.solution %>
+          </p>
         </div>
       <% }); %>
+    </div>
+    
+    <div data-reveal data-reveal-delay="3" style="background: var(--c-bg-dark); border-radius: 8px; padding: 16px 24px; text-align: center; color: var(--c-text-inv); font-weight: 600; margin-top: var(--sp-7); font-size: 0.95rem; letter-spacing: 0.02em;">
+      Helping leadership teams make faster, better-informed business decisions.
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE PRAESENTIA (VALUE PROP) ===== -->
+<section class="section bg-alt">
+  <div class="container">
+    <div class="result-header" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0; color:var(--c-teal);">Value Prop Summary</span>
+    </div>
+    
+    <h2 class="section-title" data-reveal data-reveal-delay="1" style="margin-top: var(--sp-4); margin-bottom: var(--sp-6);">
+      Why Sophisticated Leaders <span style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent);">Choose Praesentia</span>
+    </h2>
+    
+    <div class="value-prop-card" data-reveal data-reveal-delay="2">
+      <div class="value-prop-top-border"></div>
+      <div class="value-prop-grid">
+        <% 
+          const customProps = [
+            { t: 'Strategic Partnership', d: 'Executive boardroom integration.' },
+            { t: 'Faster Contracts', d: 'Drastic reduction in deal cycles.' },
+            { t: 'Better Governance', d: 'Standardized board controls.' },
+            { t: 'Stronger Compliance', d: 'Custom regulatory guardrails.' },
+            { t: 'Scalable Operations', d: 'Playbooks ready for growth.' },
+            { t: 'Reduced Costs', d: 'Attractive pricing options.' },
+            { t: 'Legal Leadership', d: 'Direct risk assessment.' },
+            { t: 'Commercial Focus', d: 'Closing transactions actively.' },
+            { t: 'Global Experience', d: 'Active multi-region support.' },
+            { t: 'Long-Term Partner', d: 'Shared vision through expansion.' }
+          ];
+          customProps.forEach(p => { 
+        %>
+          <div class="value-prop-item">
+            <span class="value-prop-check">✓</span>
+            <div>
+              <strong><%= p.t %></strong>
+              <p><%= p.d %></p>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+      
+      <div class="value-prop-footer">
+        We build legal functions that operate with corporate-grade precision while maintaining seed-stage velocity and nimbleness. Our clients scale faster, stay highly compliant, and secure better transactional outcomes.
+      </div>
     </div>
   </div>
 </section>

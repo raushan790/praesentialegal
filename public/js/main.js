@@ -6,7 +6,7 @@
   'use strict';
 
   /* ---- Scroll progress + navbar state ---- */
-  var nav = document.querySelector('.nav');
+  var header = document.querySelector('.site-header');
   var bar = document.querySelector('.scroll-progress');
   function onScroll() {
     var st = window.scrollY || document.documentElement.scrollTop;
@@ -14,7 +14,7 @@
       var h = document.documentElement.scrollHeight - window.innerHeight;
       bar.style.width = (h > 0 ? (st / h) * 100 : 0) + '%';
     }
-    if (nav) nav.classList.toggle('scrolled', st > 20);
+    if (header) header.classList.toggle('scrolled', st > 50);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();

@@ -30,7 +30,7 @@ const siteData = {
     tagline: 'Strategic Legal Partners for Growth-Focused Businesses',
     description: 'Embedded fractional General Counsel for founders, executive teams, and growing businesses — bridging the gap between expensive law firms and full-time in-house counsel across the US, India & West Asia.',
     url: 'https://praesentialegal.com',
-    email: 'hello@praesentialegal.com',
+    email: 'connect@praesentialegal.com',
     linkedin: 'https://www.linkedin.com',
     year: new Date().getFullYear(),
     jurisdictions: ['🇺🇸 United States', '🇮🇳 India', '🕌 West Asia (UAE)']
@@ -101,7 +101,7 @@ const siteData = {
       initials: 'AB',
       name: 'Arkajit Bhattacharyya',
       role: 'Partner',
-      photo: 'arkajit.png',
+      photo: 'arkajit.jpeg',
       bio: [
         'Former General Counsel / AVP Legal — Innovaccer',
         'Former Associate Director — Thomson Reuters Legal Managed Services',
@@ -114,7 +114,7 @@ const siteData = {
       initials: 'AG',
       name: 'Ayetree Gogoi',
       role: 'Partner',
-      photo: 'ayetree.png',
+      photo: 'ayetree.jpeg',
       bio: [
         'Former Associate Director — Legal — Innovaccer',
         'Former Associate Director — Thomson Reuters Legal Managed Services (later acquired by EY GDS)',

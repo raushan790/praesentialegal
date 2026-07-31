@@ -1,41 +1,48 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
-      <div>
-        <a href="/" class="logo"><img src="/img/logo.png" alt="<%= site.fullName %>" width="180" height="180"></a>
-        <p><%= site.tagline %>. Your internal legal department — without the overhead of building one. Serving the United States, India &amp; West Asia.</p>
+      <div class="footer-brand-col">
+        <a href="/" class="logo"><img src="/img/logo-rectangular-light.svg" alt="<%= site.fullName %>"></a>
+        <p class="footer-desc">Your internal legal department — without the overhead of building one. Serving growth-focused founders, executives, and scaling companies across the US, India &amp; West Asia.</p>
+        <div class="footer-socials">
+          <a href="<%= site.linkedin %>" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="mailto:<%= site.email %>" aria-label="Email">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div>
-        <h5>Navigate</h5>
+      <div class="footer-links-col">
+        <h5>Explore</h5>
         <ul>
           <% nav.forEach(item => { %>
             <li><a href="<%= item.href %>"><%= item.label %></a></li>
           <% }); %>
         </ul>
       </div>
-      <div>
-        <h5>Services</h5>
-        <ul>
-          <% services.forEach(s => { %>
-            <li><a href="/services#<%= s.id %>"><%= s.title %></a></li>
-          <% }); %>
-        </ul>
-      </div>
-      <div>
-        <h5>Connect</h5>
-        <ul>
-          <li><a href="mailto:<%= site.email %>"><%= site.email %></a></li>
-          <li><a href="<%= site.linkedin %>" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="/contact">Schedule a Call</a></li>
-        </ul>
+      <div class="footer-contact-col">
+        <h5>Get In Touch</h5>
+        <div class="footer-contact-info">
+          <a href="mailto:<%= site.email %>" class="footer-email-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-mail">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <%= site.email %>
+          </a>
+          <p class="footer-jurisdictions">Active in: <%= site.jurisdictions.join(', ') %></p>
+          <a href="/contact" class="btn btn-gold-outline footer-cta-btn">Schedule Consultation</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <%= site.year %> <%= site.fullName %>. All rights reserved.</span>
-      <div class="social">
-        <a href="<%= site.linkedin %>" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-        <a href="mailto:<%= site.email %>" aria-label="Email">✉</a>
-      </div>
     </div>
   </div>
 </footer>

@@ -1,14 +1,46 @@
-<nav class="nav">
-  <div class="container nav-inner">
-    <a href="/" class="logo"><img src="/img/logo.png" alt="<%= site.fullName %>" width="180" height="180"></a>
-    <div class="nav-links">
-      <% nav.forEach(item => { %>
-        <a href="<%= item.href %>" class="<%= currentPath === item.href ? 'active' : '' %>"><%= item.label %></a>
-      <% }); %>
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-top-inner">
+      <div class="brand-container">
+        <a href="/" class="brand-logo-link">
+          <img class="brand-logo-rect" src="/img/logo-rectangular.svg" alt="<%= site.fullName %>">
+        </a>
+      </div>
+      <div class="header-cta">
+        <a href="/contact" class="btn btn-outline">Get In Touch</a>
+      </div>
     </div>
-    <div class="nav-cta">
-      <a href="/contact" class="btn btn-primary">Get Started</a>
-    </div>
-    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
-</nav>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <!-- Mobile brand and logo (visible only on mobile) -->
+      <a href="/" class="mobile-logo-brand">
+        <img class="brand-logo-rect-sm" src="/img/logo-rectangular.svg" alt="<%= site.fullName %>">
+      </a>
+
+      <div class="nav-links">
+        <% nav.forEach(item => { %>
+          <a href="<%= item.href %>" class="<%= currentPath === item.href ? 'active' : '' %>"><%= item.label %></a>
+        <% }); %>
+      </div>
+
+      <div class="nav-right">
+        <div class="nav-socials">
+          <a href="<%= site.linkedin %>" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="mailto:<%= site.email %>" aria-label="Email">
+            <svg class="icon-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+</header>
