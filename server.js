@@ -2,6 +2,7 @@
  * Praesentia Legal Solutions — Express Server
  * Modern, clean, superfast law-firm website
  */
+require('./public-sync');
 const express = require('express');
 const path = require('path');
 
