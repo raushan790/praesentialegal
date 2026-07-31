@@ -80,44 +80,6 @@
 </section>
 
 
-<!-- ===== COMPARISON TABLE ===== -->
-<section class="section">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow center">The Praesentia Advantage</span>
-      <h2 class="section-title">Not Another Law Firm. A New Operating Paradigm.</h2>
-    </div>
-    <div data-reveal data-reveal-delay="1" class="cmp-wrap">
-      <table class="cmp-table">
-        <thead>
-          <tr>
-            <th>Dimension</th>
-            <th>Traditional Law Firm</th>
-            <th>Internal Legal Team</th>
-            <th class="highlight">Praesentia Fractional Partner</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% const rows = [
-            {dim:'Engagement Model',trad:'Matter-based support (reactive ticket desks)',intl:'High fixed cost, recruitment delays, overhead',praes:'Flexible engagement, rapid virtual scale-up'},
-            {dim:'Advisory Style',trad:'Reactive, risk-averse legal analysis only',intl:'Internal capacity limitations, backlog risk',praes:'Proactive, strategic commercial partner'},
-            {dim:'Operational Focus',trad:'Legal-only silo (no process engineering)',intl:'Internal focus with resource constraints',praes:'Integrated Legal + Business Operations'},
-            {dim:'Billing Structure',trad:'Unpredictable, high-cost hourly billing',intl:'High full-time salaries and benefits',praes:'Scalable model, predictable flat-fee retainer'},
-            {dim:'Tech & Tool Stack',trad:'Legacy, proprietary software focus',intl:'Limited budget & training bandwidth',praes:'AI implementation & CLM expertise'}
-          ]; rows.forEach(r => { %>
-            <tr>
-              <td data-label="Dimension"><%= r.dim %></td>
-              <td data-label="Traditional"><%= r.trad %></td>
-              <td data-label="Internal"><%= r.intl %></td>
-              <td data-label="Praesentia" class="highlight"><%= r.praes %></td>
-            </tr>
-          <% }); %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
 <!-- ===== IMPACT AREAS ===== -->
 <section class="section bg-alt">
   <div class="container">
