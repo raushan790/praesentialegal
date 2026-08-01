@@ -547,7 +547,7 @@ button{font:inherit;cursor:pointer;border:0;background:none}
   margin-bottom: var(--sp-4);
 }
 .footer .logo img {
-  height: 72px;
+  height: 144px;
   width: auto;
   display: block;
 }
