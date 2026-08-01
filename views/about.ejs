@@ -31,22 +31,7 @@
             <% }); %>
           </ul>
           
-          <% 
-            let tags = [];
-            if (member.initials === 'AB') {
-              tags = ['Commercial Contracts', 'M&A', 'Corporate Governance', 'Legal Operations', 'Cross-Border Support'];
-            } else if (member.initials === 'AG') {
-              tags = ['SaaS Compliance', 'Tech Expansion', 'Employment Law', 'Legal Operations', 'Vendor Governance'];
-            }
-            if (tags.length > 0) {
-          %>
-            <div class="profile-tags-label">Key Expertise</div>
-            <div class="profile-tags">
-              <% tags.forEach(tag => { %>
-                <span class="profile-tag"><%= tag %></span>
-              <% }); %>
-            </div>
-          <% } %>
+
         </div>
       </div>
     <% }); %>
@@ -62,7 +47,6 @@
   <div class="container">
     <div class="result-header" data-reveal>
       <span class="eyebrow" style="margin-bottom:0;">Proven Results</span>
-      <span style="font-size:0.75rem; color:var(--c-text-mute); font-family:var(--ff-mono); letter-spacing: 0.05em;">08 / 18 Praesentia</span>
     </div>
     
     <h2 class="section-title" data-reveal data-reveal-delay="1" style="margin-top: var(--sp-4); margin-bottom: var(--sp-5);">

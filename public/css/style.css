@@ -76,10 +76,10 @@ button{font:inherit;cursor:pointer;border:0;background:none}
 .section-lg{padding:var(--sp-10) 0 var(--sp-9)}
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
-  font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  font-size:1.52rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
   color:var(--c-accent);margin-bottom:var(--sp-4);
 }
-.eyebrow::before{content:"";width:28px;height:1.5px;background:var(--c-accent);display:inline-block;border-radius:2px}
+.eyebrow::before{content:"";width:36px;height:2.5px;background:var(--c-accent);display:inline-block;border-radius:2px}
 .eyebrow.center{justify-content:center}
 .eyebrow.light{color:var(--c-accent-2)}
 .eyebrow.light::before{background:var(--c-accent-2)}
@@ -121,8 +121,7 @@ button{font:inherit;cursor:pointer;border:0;background:none}
 /* ---------- Navbar ---------- */
 /* ---------- Header & Navbar ---------- */
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 1000;
   background: var(--c-bg);
   border-bottom: 1px solid var(--c-line-soft);
@@ -161,13 +160,13 @@ button{font:inherit;cursor:pointer;border:0;background:none}
   opacity: 0.9;
 }
 .brand-logo-rect {
-  height: 145px;
+  height: 218px;
   width: auto;
   display: block;
   transition: height .4s var(--ease), transform .3s var(--ease);
 }
 .site-header.scrolled .brand-logo-rect {
-  height: 64px;
+  height: 96px;
 }
 .brand-logo-rect:hover {
   transform: scale(1.02);
@@ -319,7 +318,7 @@ button{font:inherit;cursor:pointer;border:0;background:none}
     gap: var(--sp-2);
   }
   .brand-logo-rect-sm {
-    height: 38px;
+    height: 57px;
     width: auto;
     display: block;
   }
@@ -548,7 +547,7 @@ button{font:inherit;cursor:pointer;border:0;background:none}
   margin-bottom: var(--sp-4);
 }
 .footer .logo img {
-  height: 48px;
+  height: 72px;
   width: auto;
   display: block;
 }

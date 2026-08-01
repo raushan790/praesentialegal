@@ -14,7 +14,7 @@
       var h = document.documentElement.scrollHeight - window.innerHeight;
       bar.style.width = (h > 0 ? (st / h) * 100 : 0) + '%';
     }
-    if (header) header.classList.toggle('scrolled', st > 50);
+    // Stopped toggling scrolled class to prevent menu/logo flickering.
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
