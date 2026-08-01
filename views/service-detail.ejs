@@ -1,0 +1,54 @@
+<%- include('partials/head', { title: title, description: service.description }) %>
+<%- include('partials/nav') %>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="page-hero">
+  <div class="container">
+    <span class="eyebrow center" data-reveal>Our Services</span>
+    <h1 data-reveal data-reveal-delay="1"><%= service.title %></h1>
+    <p data-reveal data-reveal-delay="2"><%= service.description %></p>
+  </div>
+</header>
+
+<!-- ===== INTRODUCTION ===== -->
+<% if (service.intro) { %>
+  <section class="section bg-alt" style="padding-bottom: 0;">
+    <div class="container-narrow">
+      <div class="card" data-reveal style="padding: var(--sp-7); font-size: 1.15rem; line-height: 1.75; color: var(--c-text-soft); font-family: var(--ff-sans); border-left: 4px solid var(--c-accent); box-shadow: var(--shadow-sm); border-radius: var(--radius);">
+        <%= service.intro %>
+      </div>
+    </div>
+  </section>
+<% } %>
+
+<!-- ===== DETAILS SECTIONS ===== -->
+<% service.sections.forEach((section, sIdx) => { %>
+  <section class="section <%= (sIdx % 2 === 0 && !service.intro) || (sIdx % 2 !== 0 && service.intro) ? 'bg-alt' : '' %>">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <h2 class="section-title"><%= section.title %></h2>
+      </div>
+      
+      <div class="grid grid-2" style="gap: var(--sp-6); margin-top: var(--sp-6);">
+        <% section.items.forEach((item, iIdx) => { %>
+          <div class="card" data-reveal data-reveal-delay="<%= (iIdx % 2) + 1 %>" style="padding: var(--sp-6); display: flex; flex-direction: column; gap: var(--sp-3); border-top: 3px solid var(--c-accent-soft);">
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--c-text); margin: 0;"><%= item.label %></h3>
+            <p style="font-size: 0.95rem; color: var(--c-text-soft); line-height: 1.6; margin: 0;"><%= item.desc %></p>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+<% }); %>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="container">
+    <h2 data-reveal>Need strategic legal support in this area?</h2>
+    <div data-reveal data-reveal-delay="2" style="margin-top: var(--sp-6);">
+      <a href="/contact?service=<%= encodeURIComponent(service.title) %>" class="btn btn-primary">Schedule a Consultation</a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

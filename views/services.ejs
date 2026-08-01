@@ -1,88 +1,65 @@
-<%- include('partials/head', { title: title, description: 'Fractional General Counsel, Managed Legal Services, Project-Based Support, and Legal Recruitment — flexible, business-centered engagement models engineered around your strategic roadmap.' }) %>
+<%- include('partials/head', { title: title, description: 'Our Services — strategic legal services that help businesses manage risk, enable growth, and navigate complex legal and commercial challenges.' }) %>
 <%- include('partials/nav') %>
 
 <!-- ===== PAGE HERO ===== -->
 <header class="page-hero">
   <div class="container">
-    <span class="eyebrow center" data-reveal>Our Service Delivery</span>
-    <h1 data-reveal data-reveal-delay="1">Flexible, Business-Centered<br>Engagement Models</h1>
-    <p data-reveal data-reveal-delay="2">Unlike rigid hourly firms, we structure our work around your operational needs — predictable pricing and integrated, daily strategic legal support. Engagements engineered precisely around your strategic roadmap and business scale.</p>
+    <span class="eyebrow center" data-reveal>Our Services</span>
+    <h1 data-reveal data-reveal-delay="1">Strategic Legal Partnership</h1>
+    <p data-reveal data-reveal-delay="2">We provide strategic legal services that help businesses manage risk, enable growth, and navigate complex legal and commercial challenges.</p>
   </div>
 </header>
 
-<!-- ===== SERVICES ===== -->
-<section class="section">
-  <div class="container">
-    <div class="grid grid-2" style="gap:var(--sp-7)">
-      <% services.forEach((s, idx) => { %>
-        <div class="card svc-card" id="<%= s.id %>" data-reveal data-reveal-delay="<%= (idx % 2) + 1 %>" style="min-height:340px">
-          <span class="badge"><%= s.badge %></span>
-          <h3><%= s.title %></h3>
-          <p><%= s.desc %></p>
-          <ul>
-            <% s.points.forEach(p => { %><li><%= p %></li><% }); %>
-          </ul>
-        </div>
-      <% }); %>
-    </div>
-  </div>
-</section>
-
-<!-- ===== GLOBAL REACH ===== -->
-<section class="section bg-dark">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow light center">Global Reach</span>
-      <h2 class="section-title">Global Perspective. Local Execution.</h2>
-      <p class="section-sub" style="margin-left:auto;margin-right:auto">Cross-border business operations carry massive compliance overhead. We act as your single strategic point of contact to run multi-jurisdictional frameworks.</p>
-    </div>
-    <div class="world-grid" data-reveal data-reveal-delay="1">
-      <% const jurisdictions = [
-        {flag:'🇺🇸',name:'United States',items:[['Contracts:','Multi-state commercial agreements'],['Compliance:','Federal & state regulatory frameworks'],['Employment:','At-will & contractor structures'],['Corporate:','Entity formation & governance']]},
-        {flag:'🇮🇳',name:'India',items:[['Contracts:','Commercial & tech agreements'],['Compliance:','Companies Act, data privacy'],['Employment:','Labour law & EOR setups'],['Corporate:','FDI & cross-border structuring']]},
-        {flag:'🕌',name:'West Asia (UAE)',items:[['Contracts:','Multi-currency commercial agreements'],['Compliance:','Mainland & free zone frameworks'],['Employment:','Labour law & sponsorship rules'],['Corporate:','Entity setup & inter-company agreements']]}
-      ]; jurisdictions.forEach(j => { %>
-        <div class="jurisdiction">
-          <div class="flag"><%= j.flag %></div>
-          <h4><%= j.name %></h4>
-          <ul>
-            <% j.items.forEach(([label,desc]) => { %>
-              <li><strong><%= label %></strong> <%= desc %></li>
-            <% }); %>
-          </ul>
-        </div>
-      <% }); %>
-    </div>
-    <div style="max-width:800px;margin:var(--sp-8) auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-5)" data-reveal data-reveal-delay="2">
-      <% const crossBorder = [
-        ['Cross-Border Contracts','Multi-currency commercial agreements and standard data privacy clauses.'],
-        ['Global Workforce','Compliance screening for global remote teams, local labor rules, and EOR contract setups.'],
-        ['Expansion Support','Structuring regional entities and managing inter-company legal agreements.'],
-        ['Multi-Jurisdiction Compliance','Reconciling local corporate, data privacy, employment laws seamlessly.']
-      ]; crossBorder.forEach(([t,d]) => { %>
-        <div style="padding:var(--sp-5);border:1px solid var(--c-line-dark);border-radius:var(--radius)">
-          <h4 style="color:var(--c-accent-2);font-size:1rem;margin-bottom:var(--sp-2)"><%= t %></h4>
-          <p style="color:var(--c-text-inv-soft);font-size:.9rem"><%= d %></p>
-        </div>
-      <% }); %>
-    </div>
-  </div>
-</section>
-
-<!-- ===== VALUE PROPS ===== -->
+<!-- ===== SERVICE FOCUS AREAS ===== -->
 <section class="section bg-alt">
   <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow center">Why Choose Praesentia</span>
-      <h2 class="section-title">Why Sophisticated Leaders Choose Us</h2>
+    <div class="grid grid-3" style="gap: var(--sp-6);">
+      <div class="card" data-reveal data-reveal-delay="1" style="padding: var(--sp-7); display: flex; flex-direction: column; gap: var(--sp-3);">
+        <div style="font-size: 2.5rem; line-height: 1;">🌍</div>
+        <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--c-text);">Across Jurisdictions</h3>
+        <p style="font-size: 0.95rem; color: var(--c-text-soft); line-height: 1.6;">Supporting businesses operating in India, the United States, and West Asia, while coordinating with trusted local and specialist counsel wherever jurisdiction-specific expertise is required.</p>
+      </div>
+
+      <div class="card" data-reveal data-reveal-delay="2" style="padding: var(--sp-7); display: flex; flex-direction: column; gap: var(--sp-3);">
+        <div style="font-size: 2.5rem; line-height: 1;">⚖️</div>
+        <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--c-text);">Business-Focused Legal Services</h3>
+        <p style="font-size: 0.95rem; color: var(--c-text-soft); line-height: 1.6;">Practical, commercially driven legal solutions tailored to your industry, growth stage, and business objectives.</p>
+      </div>
+
+      <div class="card" data-reveal data-reveal-delay="3" style="padding: var(--sp-7); display: flex; flex-direction: column; gap: var(--sp-3);">
+        <div style="font-size: 2.5rem; line-height: 1;">🤝</div>
+        <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--c-text);">Scalable Legal Support</h3>
+        <p style="font-size: 0.95rem; color: var(--c-text-soft); line-height: 1.6;">Responsive legal services that evolve with your business, from day-to-day advisory to complex strategic initiatives.</p>
+      </div>
     </div>
-    <div class="grid grid-4">
-      <% valueProps.forEach((vp, idx) => { %>
-        <div class="card" data-reveal data-reveal-delay="<%= (idx % 4) + 1 %>">
-          <div class="icon"><%= vp.icon %></div>
-          <h3><%= vp.title %></h3>
-          <p><%= vp.desc %></p>
-        </div>
+  </div>
+</section>
+
+<!-- ===== CORE SERVICES ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow center">Our Core Services</span>
+      <h2 class="section-title">Areas of Expertise</h2>
+    </div>
+
+    <div class="grid grid-4" style="gap: var(--sp-5); margin-top: var(--sp-6);">
+      <% 
+        const coreServices = [
+          { title: 'Commercial Contracting', id: 'commercial-contracting' },
+          { title: 'Compliance & Governance', id: 'compliance-governance' },
+          { title: 'Employment Law & HR Advisory', id: 'employment-hr' },
+          { title: 'Legal Tech & Operations', id: 'legal-tech-ops' },
+          { title: 'Commercial Dispute Management', id: 'dispute-management' },
+          { title: 'Fundraising & M&A Support', id: 'fundraising-ma' },
+          { title: 'IP Portfolio Management', id: 'ip-portfolio' },
+          { title: 'Legal Recruitment', id: 'legal-recruitment' }
+        ];
+        coreServices.forEach((service, idx) => {
+      %>
+        <a href="/services/<%= service.id %>" class="card card-hover-gold" data-reveal data-reveal-delay="<%= (idx % 4) + 1 %>" style="padding: var(--sp-6); text-align: center; display: flex; align-items: center; justify-content: center; min-height: 100px; border-top: 3px solid var(--c-accent-soft); text-decoration: none; transition: all 0.3s var(--ease);">
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--c-text); margin: 0;"><%= service.title %></h3>
+        </a>
       <% }); %>
     </div>
   </div>
@@ -91,8 +68,8 @@
 <!-- ===== CTA ===== -->
 <section class="cta-band">
   <div class="container">
-    <p class="quote-block" data-reveal>"Engagements engineered precisely around your strategic roadmap and business scale."</p>
-    <div data-reveal data-reveal-delay="2" style="margin-top:var(--sp-6)">
+    <h2 data-reveal>Ready to align your legal operations with your business goals?</h2>
+    <div data-reveal data-reveal-delay="2" style="margin-top: var(--sp-6);">
       <a href="/contact" class="btn btn-primary">Start the Conversation</a>
     </div>
   </div>

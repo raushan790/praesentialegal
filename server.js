@@ -161,7 +161,167 @@ app.use((req, res, next) => {
 // ---- Routes ----
 app.get('/', (req, res) => res.render('index', { title: 'Strategic Legal Partners for Growth-Focused Businesses' }));
 app.get('/about', (req, res) => res.render('about', { title: 'About — Leadership Team' }));
+const servicesDetailData = {
+  'commercial-contracting': {
+    title: 'Commercial Contracting',
+    description: 'Strategic contracting support that accelerates business while managing legal and commercial risk.',
+    sections: [
+      {
+        title: 'Contract Coverage',
+        items: [
+          { label: 'Technology & SaaS', desc: 'SaaS, cloud services, software licensing, subscription agreements, order forms, online terms, clickwrap/browsewrap terms, EULAs, AI and technology agreements.' },
+          { label: 'Industrial, Manufacturing & Energy', desc: 'Equipment supply, manufacturing, EPC and industrial services, oil & gas, aviation, infrastructure, and energy sector agreements.' },
+          { label: 'Communications, AI & Digital Engagement', desc: 'Agreements for AI-enabled communications, voice automation, telephony and CPaaS platforms, messaging services, contact center technologies, healthcare communications, banking and financial services communications, customer engagement platforms, and other communication technology solutions.' },
+          { label: 'Procurement & Vendor Management', desc: 'Supplier, procurement, professional services, outsourcing, managed services, and vendor agreements.' },
+          { label: 'Strategic Partnerships', desc: 'Channel, reseller, referral, distribution, co-development, OEM, alliance, and go-to-market agreements.' },
+          { label: 'Privacy & Data Protection', desc: 'DPAs, BAAs, HIPAA agreements, data sharing and licensing agreements, NDAs, privacy policies, and related compliance documentation.' },
+          { label: 'Corporate & Commercial', desc: 'Term sheets, agency agreements, consulting agreements, leases, website terms, bespoke commercial contracts, and other strategic business agreements.' }
+        ]
+      },
+      {
+        title: 'Contracting Capabilities',
+        items: [
+          { label: 'Contract Lifecycle Management', desc: 'End-to-end support from contract request and drafting through negotiation, execution, renewals, and ongoing contract management.' },
+          { label: 'Commercial Negotiation', desc: 'Negotiating legal and commercial terms that balance business objectives, revenue growth, and risk management.' },
+          { label: 'Playbooks & Templates', desc: 'Developing clause libraries, negotiation playbooks, templates, and fallback positions to improve consistency and deal velocity.' },
+          { label: 'Legal Operations & CLM', desc: 'Optimizing contract review processes, AI-enabled workflows, contract lifecycle management (CLM), and legal operations.' },
+          { label: 'Process & Governance', desc: 'Designing scalable contracting frameworks, approval workflows, delegation matrices, and governance processes.' },
+          { label: 'Cross-Functional Partnership', desc: 'Supporting Sales, Procurement, Finance, Product, Compliance, and Leadership teams throughout the contracting process.' },
+          { label: 'Managed Contracting Services', desc: 'SLA-driven contract support with measurable turnaround times, quality controls, and continuous process improvement.' }
+        ]
+      }
+    ]
+  },
+  'compliance-governance': {
+    title: 'Compliance & Governance',
+    description: 'Scalable compliance and governance frameworks that enable growth while managing legal and regulatory risk.',
+    intro: 'We help businesses design, implement, and maintain practical compliance programs that integrate seamlessly into day-to-day operations. Acting as your strategic legal partner, we build governance frameworks that are proportionate, scalable, and aligned with your business objectives.',
+    sections: [
+      {
+        title: 'Policy Development & Governance',
+        items: [
+          { label: 'Corporate Policies', desc: 'Corporate policies, employee handbooks, codes of conduct, delegations of authority, compliance manuals, SOPs, governance frameworks, and implementation support.' },
+          { label: 'Corporate Compliance & Ethics', desc: 'Anti-bribery and corruption (ABC), anti-fraud, conflicts of interest, gifts and entertainment, whistleblower programs, third-party due diligence, ethics frameworks, and compliance training.' },
+          { label: 'Privacy & Data Protection', desc: 'Designing privacy compliance programs, advising on HIPAA, GDPR, DPDP Act, and other global privacy frameworks, and supporting privacy governance and operational compliance.' },
+          { label: 'Product & Regulatory Advisory', desc: 'Vendor due diligence, procurement governance, outsourcing compliance, supplier onboarding, supplier codes of conduct, and ongoing contractual and regulatory compliance.' },
+          { label: 'Internal Investigations', desc: 'Planning and directing independent workplace and compliance investigations, coordinating with leadership and specialist advisors where required, reporting findings, and supporting remediation and corrective action plans.' }
+        ]
+      }
+    ]
+  },
+  'employment-hr': {
+    title: 'Employment Law & HR Advisory',
+    description: 'Practical legal support across the employee lifecycle—from hiring and policy development to workforce restructuring and day-to-day HR advisory.',
+    sections: [
+      {
+        title: 'Employment Offerings',
+        items: [
+          { label: 'Employment Contracts & Compensation', desc: 'Drafting and negotiating employment agreements, executive contracts, offer letters, confidentiality and IP assignment agreements, incentive plans, and separation arrangements.' },
+          { label: 'HR Policies & Compliance', desc: 'Developing employee handbooks, workplace policies, codes of conduct, disciplinary frameworks, and multi-jurisdiction employment compliance programs.' },
+          { label: 'Workforce Advisory', desc: 'Advising on hiring, performance management, disciplinary actions, workplace investigations, employee grievances, restructurings, redundancies, terminations, and separation agreements.' },
+          { label: 'Global Workforce', desc: 'Structuring compliant international employment, contractor, consultant, and Employer of Record (EOR) arrangements across jurisdictions.' },
+          { label: 'Strategic HR Support', desc: 'Providing ongoing legal guidance to leadership and HR teams on day-to-day employment issues, labor law compliance, and people-related legal risks.' }
+        ]
+      }
+    ]
+  },
+  'legal-tech-ops': {
+    title: 'Legal Tech & Operations',
+    description: 'Optimizing processes, deploying next-gen AI tools, and building scalable legal operations to drive efficiency and velocity.',
+    sections: [
+      {
+        title: 'Core Capabilities',
+        items: [
+          { label: 'Legal Tech Strategy & Assessment', desc: 'Reviewing existing workflows, identifying bottlenecks, and defining a practical legal technology roadmap.' },
+          { label: 'CLM & Automation', desc: 'Implementing Contract Lifecycle Management (CLM) systems, automating routine document drafting, and setting up clean approvals.' },
+          { label: 'AI Implementation', desc: 'Leveraging modern AI and LLM tools for contract reviews, clause analytics, and automated compliance checks.' },
+          { label: 'Legal Ops Reporting', desc: 'Designing dashboards, establishing key metrics, and reporting on legal spend, turnaround times, and contract volumes.' }
+        ]
+      }
+    ]
+  },
+  'dispute-management': {
+    title: 'Commercial Dispute Management',
+    description: 'We help businesses manage commercial disputes strategically—minimizing legal risk, preserving business relationships where possible, and coordinating with specialist counsel to achieve commercially effective outcomes.',
+    sections: [
+      {
+        title: 'Dispute Capabilities',
+        items: [
+          { label: 'Dispute Strategy & Risk Assessment', desc: 'Evaluating claims, assessing legal and commercial risks, and developing practical dispute resolution strategies.' },
+          { label: 'Negotiation & Early Resolution', desc: 'Leading pre-litigation negotiations, settlement discussions, and mediation efforts to resolve disputes efficiently and preserve commercial relationships.' },
+          { label: 'Internal Investigations', desc: 'Advising on workplace investigations, whistleblower complaints, regulatory inquiries, and other sensitive internal matters.' },
+          { label: 'Arbitration & Litigation Management', desc: 'Acting as your in-house legal partner by coordinating with external counsel, managing legal workstreams, supporting case strategy, and overseeing disputes through arbitration, litigation, or settlement.' }
+        ]
+      }
+    ]
+  },
+  'fundraising-ma': {
+    title: 'Fundraising & M&A Support',
+    description: 'Comprehensive support through fundraising rounds, mergers and acquisitions, and cross-border transactions.',
+    sections: [
+      {
+        title: 'Mergers & Acquisitions',
+        items: [
+          { label: 'Transaction Structuring', desc: 'Advising on the legal framework and commercial structure for mergers, acquisitions, strategic investments, restructurings, and asset purchases.' },
+          { label: 'Due Diligence & Risk Assessment', desc: 'Identifying legal and commercial risks, coordinating due diligence, and supporting informed decision-making.' },
+          { label: 'Transaction Management', desc: 'Acting as your in-house legal partner to oversee the transaction process, coordinate with leadership, financial advisors, specialist counsel, and external law firms, and drive transactions through signing and closing.' },
+          { label: 'Negotiation & Execution', desc: 'Supporting the negotiation of key commercial terms and definitive transaction documents to achieve commercially sound outcomes.' }
+        ]
+      },
+      {
+        title: 'Fundraising',
+        items: [
+          { label: 'Fundraising Strategy', desc: 'Providing legal oversight throughout the fundraising process, from initial discussions to closing.' },
+          { label: 'Term Sheets & Transaction Documents', desc: 'Reviewing and negotiating term sheets and other key investment documents.' },
+          { label: 'Due Diligence', desc: 'Managing the legal due diligence process and preparing your business for investor review.' },
+          { label: 'Transaction Coordination', desc: 'Working closely with founders, leadership teams, investors, specialist counsel, and external law firms to keep the fundraising process efficient and on track.' }
+        ]
+      }
+    ]
+  },
+  'ip-portfolio': {
+    title: 'IP Portfolio Management',
+    description: 'We help businesses identify, protect, and strategically manage their intellectual property assets, coordinating with specialist IP counsel where required to build and maintain a strong, commercially valuable IP portfolio.',
+    sections: [
+      {
+        title: 'Portfolio Capabilities',
+        items: [
+          { label: 'IP Identification & Strategy', desc: 'Identifying protectable trademarks, copyrights, patents, trade secrets, and other intellectual property aligned with your business and product strategy.' },
+          { label: 'Registration Management', desc: 'Managing the trademark, copyright, and patent registration process, including coordinating searches, filings, responses, and registrations with specialist IP counsel and filing agents.' },
+          { label: 'Portfolio Management', desc: 'Maintaining and managing your IP portfolio across jurisdictions, including renewals, ownership records, assignments, and licensing support.' },
+          { label: 'Commercialization & Protection', desc: 'Advising on the ownership, licensing, commercialization, and protection of intellectual property throughout its lifecycle.' },
+          { label: 'IP Risk & Enforcement Support', desc: 'Supporting infringement assessments, enforcement strategies, and coordination with specialist counsel for disputes, oppositions, and litigation where required.' }
+        ]
+      }
+    ]
+  },
+  'legal-recruitment': {
+    title: 'Legal Recruitment',
+    description: 'Unlike traditional recruitment firms that primarily source and refer candidates, we partner with you to build your in-house legal team with the judgment and rigor of an experienced General Counsel—identifying, evaluating, and selecting lawyers who are the right fit for your business.',
+    sections: [
+      {
+        title: 'Recruitment Approach',
+        items: [
+          { label: 'Role Design', desc: "Defining legal roles, responsibilities, and job descriptions based on your organization's needs and growth plans." },
+          { label: 'Talent Identification', desc: 'Leveraging our curated network of accomplished legal professionals to identify and shortlist high-quality candidates.' },
+          { label: 'Candidate Assessment', desc: 'Conducting interviews and evaluating legal expertise, commercial judgment, leadership potential, and cultural fit through structured assessments and practical evaluations, where appropriate.' },
+          { label: 'Hiring Recommendations', desc: 'Providing detailed interview feedback, candidate evaluations, and hiring recommendations to support confident hiring decisions.' },
+          { label: 'Onboarding Support', desc: 'Assisting with offer discussions, onboarding, and the successful integration of new legal hires into your organization.' }
+        ]
+      }
+    ]
+  }
+};
+
 app.get('/services', (req, res) => res.render('services', { title: 'Services & Engagement Models' }));
+
+app.get('/services/:serviceId', (req, res) => {
+  const service = servicesDetailData[req.params.serviceId];
+  if (!service) {
+    return res.status(404).render('404', { title: 'Page Not Found' });
+  }
+  res.render('service-detail', { title: service.title, service: service });
+});
 app.get('/impact', (req, res) => res.render('impact', { title: 'Proven Results' }));
 app.get('/contact', (req, res) => res.render('contact', { title: 'Schedule a Consultation' }));
 
