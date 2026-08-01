@@ -145,7 +145,7 @@ const siteData = {
     { num: '06', icon: '🏛️', title: 'Governance Control', problem: 'Investor expectations', solution: 'Bulletproof compliance & governance standards designed to ace strict institutional DD.' }
   ],
   stats: [
-    { num: 30, suffix: '+', label: 'Years Combined Experience' },
+    { num: 37, suffix: '+', label: 'Years Combined Experience' },
     { num: 3, suffix: '', label: 'Active Jurisdictions' },
     { num: 4, suffix: '', label: 'Engagement Models' },
     { num: 2, suffix: '', label: 'Scale-Up Alumni' }

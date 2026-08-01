@@ -14,7 +14,7 @@
       <a href="/services" class="btn btn-ghost">Explore Services</a>
     </div>
     <div class="hero-stats" data-reveal data-reveal-delay="4">
-      <div class="hero-stat"><div class="num"><span data-count="30">0</span>+</div><div class="lbl">Years Combined Experience</div></div>
+      <div class="hero-stat"><div class="num"><span data-count="37">0</span>+</div><div class="lbl">Years Combined Experience</div></div>
       <div class="hero-stat"><div class="num"><span data-count="3">0</span></div><div class="lbl">Active Jurisdictions</div></div>
       <div class="hero-stat"><div class="num"><span data-count="4">0</span></div><div class="lbl">Engagement Models</div></div>
     </div>
@@ -80,51 +80,58 @@
 </section>
 
 
-<!-- ===== IMPACT AREAS ===== -->
+<!-- ===== COMPARISON TABLE (PRAESENTIA ADVANTAGE) ===== -->
 <section class="section bg-alt">
   <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow center">Our Impact Area</span>
-      <h2 class="section-title">Where We Create Immediate Impact</h2>
+    <div class="result-header" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0; color:var(--c-teal);">The Praesentia Advantage</span>
     </div>
-    <div class="grid grid-3">
-      <% impactAreas.forEach((area, idx) => { %>
-        <div class="card" data-reveal data-reveal-delay="<%= (idx % 3) + 1 %>">
-          <span class="num-tag"><%= area.num %></span>
-          <div class="icon"><%= area.icon %></div>
-          <h3><%= area.title %></h3>
-          <p><%= area.solution %></p>
-        </div>
-      <% }); %>
+    
+    <h2 class="section-title" data-reveal data-reveal-delay="1" style="margin-top: var(--sp-4); margin-bottom: var(--sp-6);">
+      Not Another Law Firm: <span style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent);">A New Operating Paradigm</span>
+    </h2>
+    
+    <div data-reveal data-reveal-delay="2" class="cmp-wrap" style="box-shadow: var(--shadow-lg);">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Traditional Law Firm</th>
+            <th>Internal Legal Team (Full-Time)</th>
+            <th style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); font-weight: 700;">Praesentia Fractional Partner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% 
+            const compRows = [
+              { dim: 'Engagement Model', trad: 'Matter-based support (reactive ticket desks)', intl: 'High fixed cost, recruitment delays, overhead', praes: 'Flexible engagement, rapid virtual scale-up' },
+              { dim: 'Strategic Execution', trad: 'Reactive, risk-averse legal analysis only', intl: 'Internal capacity limitations, backlog risk', praes: 'Proactive, strategic commercial partner' },
+              { dim: 'Operational Focus', trad: 'Legal-only silo (no process engineering)', intl: 'Internal focus with resource constraints', praes: 'Integrated Legal + Business Operations' },
+              { dim: 'Billing Structure', trad: 'Unpredictable, high-cost hourly billing', intl: 'High full-time salaries and benefits', praes: 'Scalable model, predictable flat-fee retainer' },
+              { dim: 'Tech & Tool Stack', trad: 'Legacy, proprietary software focus', intl: 'Limited budget & training bandwidth', praes: 'AI implementation & CLM expertise' }
+            ];
+            compRows.forEach(r => { 
+          %>
+            <tr>
+              <td data-label="Dimension" style="font-weight: 700;"><%= r.dim %></td>
+              <td data-label="Traditional"><%= r.trad %></td>
+              <td data-label="Internal"><%= r.intl %></td>
+              <td data-label="Praesentia" style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); font-weight: 600;"><%= r.praes %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    
+    <div style="text-align:center; margin-top:var(--sp-7);" data-reveal>
+      <p class="quote-center" style="font-size:1.30rem; color:var(--c-text); font-family:var(--ff-serif); font-style:italic; font-weight:600;">
+        "Legal support is only part of the solution. Practical execution inside the business creates value."
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ===== SERVICES PREVIEW ===== -->
-<section class="section">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow center">Our Service Delivery</span>
-      <h2 class="section-title">Flexible, Business-Centered Engagement Models</h2>
-      <p class="section-sub" style="margin-left:auto;margin-right:auto">Unlike rigid hourly firms, we structure our work around your operational needs — predictable pricing and integrated, daily strategic legal support.</p>
-    </div>
-    <div class="grid grid-4">
-      <% services.forEach((s, idx) => { %>
-        <div class="card svc-card" data-reveal data-reveal-delay="<%= (idx % 4) + 1 %>">
-          <span class="badge"><%= s.badge %></span>
-          <h3><%= s.title %></h3>
-          <p><%= s.desc.split('.').slice(0,2).join('.') %>.</p>
-          <ul>
-            <% s.points.slice(0,3).forEach(p => { %><li><%= p %></li><% }); %>
-          </ul>
-        </div>
-      <% }); %>
-    </div>
-    <div class="text-center" style="margin-top:var(--sp-7)" data-reveal>
-      <a href="/services" class="btn-link">View all services in detail</a>
-    </div>
-  </div>
-</section>
+
 
 <!-- ===== CTA BAND ===== -->
 <section class="cta-band">
