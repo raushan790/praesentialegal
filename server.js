@@ -214,7 +214,7 @@ const servicesDetailData = {
     description: 'Practical legal support across the employee lifecycle—from hiring and policy development to workforce restructuring and day-to-day HR advisory.',
     sections: [
       {
-        title: 'Employment Offerings',
+        title: '',
         items: [
           { label: 'Employment Contracts & Compensation', desc: 'Drafting and negotiating employment agreements, executive contracts, offer letters, confidentiality and IP assignment agreements, incentive plans, and separation arrangements.' },
           { label: 'HR Policies & Compliance', desc: 'Developing employee handbooks, workplace policies, codes of conduct, disciplinary frameworks, and multi-jurisdiction employment compliance programs.' },
@@ -245,7 +245,7 @@ const servicesDetailData = {
     description: 'We help businesses manage commercial disputes strategically—minimizing legal risk, preserving business relationships where possible, and coordinating with specialist counsel to achieve commercially effective outcomes.',
     sections: [
       {
-        title: 'Dispute Capabilities',
+        title: '',
         items: [
           { label: 'Dispute Strategy & Risk Assessment', desc: 'Evaluating claims, assessing legal and commercial risks, and developing practical dispute resolution strategies.' },
           { label: 'Negotiation & Early Resolution', desc: 'Leading pre-litigation negotiations, settlement discussions, and mediation efforts to resolve disputes efficiently and preserve commercial relationships.' },
@@ -284,7 +284,7 @@ const servicesDetailData = {
     description: 'We help businesses identify, protect, and strategically manage their intellectual property assets, coordinating with specialist IP counsel where required to build and maintain a strong, commercially valuable IP portfolio.',
     sections: [
       {
-        title: 'Portfolio Capabilities',
+        title: '',
         items: [
           { label: 'IP Identification & Strategy', desc: 'Identifying protectable trademarks, copyrights, patents, trade secrets, and other intellectual property aligned with your business and product strategy.' },
           { label: 'Registration Management', desc: 'Managing the trademark, copyright, and patent registration process, including coordinating searches, filings, responses, and registrations with specialist IP counsel and filing agents.' },
@@ -300,7 +300,7 @@ const servicesDetailData = {
     description: 'Unlike traditional recruitment firms that primarily source and refer candidates, we partner with you to build your in-house legal team with the judgment and rigor of an experienced General Counsel—identifying, evaluating, and selecting lawyers who are the right fit for your business.',
     sections: [
       {
-        title: 'Recruitment Approach',
+        title: '',
         items: [
           { label: 'Role Design', desc: "Defining legal roles, responsibilities, and job descriptions based on your organization's needs and growth plans." },
           { label: 'Talent Identification', desc: 'Leveraging our curated network of accomplished legal professionals to identify and shortlist high-quality candidates.' },
