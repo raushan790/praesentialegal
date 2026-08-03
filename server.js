@@ -195,10 +195,9 @@ const servicesDetailData = {
   'compliance-governance': {
     title: 'Compliance & Governance',
     description: 'Scalable compliance and governance frameworks that enable growth while managing legal and regulatory risk.',
-    intro: 'We help businesses design, implement, and maintain practical compliance programs that integrate seamlessly into day-to-day operations. Acting as your strategic legal partner, we build governance frameworks that are proportionate, scalable, and aligned with your business objectives.',
     sections: [
       {
-        title: 'Policy Development & Governance',
+        title: '',
         items: [
           { label: 'Corporate Policies', desc: 'Corporate policies, employee handbooks, codes of conduct, delegations of authority, compliance manuals, SOPs, governance frameworks, and implementation support.' },
           { label: 'Corporate Compliance & Ethics', desc: 'Anti-bribery and corruption (ABC), anti-fraud, conflicts of interest, gifts and entertainment, whistleblower programs, third-party due diligence, ethics frameworks, and compliance training.' },
@@ -230,7 +229,7 @@ const servicesDetailData = {
     description: 'Optimizing processes, deploying next-gen AI tools, and building scalable legal operations to drive efficiency and velocity.',
     sections: [
       {
-        title: 'Core Capabilities',
+        title: '',
         items: [
           { label: 'Legal Tech Strategy & Assessment', desc: 'Reviewing existing workflows, identifying bottlenecks, and defining a practical legal technology roadmap.' },
           { label: 'CLM & Automation', desc: 'Implementing Contract Lifecycle Management (CLM) systems, automating routine document drafting, and setting up clean approvals.' },

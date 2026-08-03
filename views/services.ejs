@@ -1,67 +1,77 @@
-<%- include('partials/head', { title: title, description: 'Our Services — strategic legal services that help businesses manage risk, enable growth, and navigate complex legal and commercial challenges.' }) %>
-<%- include('partials/nav') %>
+<%- include('partials/head', { title: title,
+  description: 'Our Services — strategic legal services that help businesses manage risk, enable growth, and navigate complex legal and commercial challenges.'
+  }) %>
+  <%- include('partials/nav') %>
 
-<!-- ===== PAGE HERO ===== -->
-<header class="page-hero" style="padding-bottom: var(--sp-8);">
-  <div class="container" style="max-width: 820px; text-align: center;">
-    <h1 class="eyebrow center" data-reveal>Our Services</h1>
-    <p data-reveal data-reveal-delay="1" style="margin-top: var(--sp-4); font-size: 1.15rem; line-height: 1.7; color: var(--c-text-soft); text-align: left;">We provide strategic legal services that help businesses manage risk, enable growth, and navigate complex legal and commercial challenges.</p>
-    
-    <div data-reveal data-reveal-delay="2" style="margin-top: var(--sp-6); text-align: left; display: flex; flex-direction: column; gap: var(--sp-4);">
-      <div style="font-size: 1.05rem; line-height: 1.6; color: var(--c-text); display: flex; gap: var(--sp-3); align-items: flex-start;">
-        <span style="font-size: 1.4rem; line-height: 1.2;">🌍</span>
-        <span><strong>Across Jurisdictions</strong> – Supporting businesses operating in India, the United States, and West Asia, while coordinating with trusted local and specialist counsel wherever jurisdiction-specific expertise is required.</span>
+    <!-- ===== PAGE HERO ===== -->
+    <header class="page-hero" style="padding-bottom: var(--sp-8);">
+      <div class="container" style="max-width: 820px; text-align: center;">
+        <h1 class="eyebrow center" data-reveal>Our Services</h1>
+        <p data-reveal data-reveal-delay="1"
+          style="margin-top: var(--sp-4); font-size: 1.15rem; line-height: 1.7; color: var(--c-text-soft); text-align: left;">
+          We provide strategic legal services that help businesses manage risk, enable growth, and navigate complex
+          legal and commercial challenges.</p>
+
+        <div data-reveal data-reveal-delay="2"
+          style="margin-top: var(--sp-6); text-align: left; display: flex; flex-direction: column; gap: var(--sp-4);">
+          <div
+            style="font-size: 1.05rem; line-height: 1.6; color: var(--c-text); display: flex; gap: var(--sp-3); align-items: flex-start;">
+            <span style="font-size: 1.4rem; line-height: 1.2;">🌍</span>
+            <span><strong>Across Jurisdictions</strong> – Supporting businesses operating in India, the United States,
+              and West Asia, while coordinating with trusted local and specialist counsel wherever jurisdiction-specific
+              expertise is required.</span>
+          </div>
+          <div
+            style="font-size: 1.05rem; line-height: 1.6; color: var(--c-text); display: flex; gap: var(--sp-3); align-items: flex-start;">
+            <span style="font-size: 1.4rem; line-height: 1.2;">⚖️</span>
+            <span><strong>Business-Focused Legal Services</strong> – Practical, commercially driven legal solutions
+              tailored to your industry, growth stage, and business objectives.</span>
+          </div>
+          <div
+            style="font-size: 1.05rem; line-height: 1.6; color: var(--c-text); display: flex; gap: var(--sp-3); align-items: flex-start;">
+            <span style="font-size: 1.4rem; line-height: 1.2;">🤝</span>
+            <span><strong>Scalable Legal Support</strong> – Responsive legal services that evolve with your business,
+              from day-to-day advisory to complex strategic initiatives.</span>
+          </div>
+        </div>
       </div>
-      <div style="font-size: 1.05rem; line-height: 1.6; color: var(--c-text); display: flex; gap: var(--sp-3); align-items: flex-start;">
-        <span style="font-size: 1.4rem; line-height: 1.2;">⚖️</span>
-        <span><strong>Business-Focused Legal Services</strong> – Practical, commercially driven legal solutions tailored to your industry, growth stage, and business objectives.</span>
+    </header>
+
+    <!-- ===== CORE SERVICES ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <h2 class="section-title">Areas of Expertise</h2>
+        </div>
+
+        <div class="grid grid-4" style="gap: var(--sp-5); margin-top: var(--sp-6);">
+          <% const coreServices=[ { title: 'Commercial Contracting' , id: 'commercial-contracting' }, {
+            title: 'Compliance & Governance' , id: 'compliance-governance' }, { title: 'Employment Law & HR Advisory' ,
+            id: 'employment-hr' }, { title: 'Legal Tech & Operations' , id: 'legal-tech-ops' }, {
+            title: 'Commercial Dispute Management' , id: 'dispute-management' }, { title: 'Fundraising & M&A Support' ,
+            id: 'fundraising-ma' }, { title: 'IP Portfolio Management' , id: 'ip-portfolio' }, {
+            title: 'Legal Recruitment' , id: 'legal-recruitment' } ]; coreServices.forEach((service, idx)=> {
+            %>
+            <a href="/services/<%= service.id %>" class="card card-hover-gold" data-reveal
+              data-reveal-delay="<%= (idx % 4) + 1 %>"
+              style="padding: var(--sp-6); text-align: center; display: flex; align-items: center; justify-content: center; min-height: 100px; border-top: 3px solid var(--c-accent-soft); text-decoration: none; transition: all 0.3s var(--ease);">
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--c-text); margin: 0;">
+                <%= service.title %>
+              </h3>
+            </a>
+            <% }); %>
+        </div>
       </div>
-      <div style="font-size: 1.05rem; line-height: 1.6; color: var(--c-text); display: flex; gap: var(--sp-3); align-items: flex-start;">
-        <span style="font-size: 1.4rem; line-height: 1.2;">🤝</span>
-        <span><strong>Scalable Legal Support</strong> – Responsive legal services that evolve with your business, from day-to-day advisory to complex strategic initiatives.</span>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-band">
+      <div class="container">
+        <h2 data-reveal>Ready to align your legal operations with your business goals?</h2>
+        <div data-reveal data-reveal-delay="2" style="margin-top: var(--sp-6);">
+          <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
+    </section>
 
-<!-- ===== CORE SERVICES ===== -->
-<section class="section">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow center">Our Core Services</span>
-      <h2 class="section-title">Areas of Expertise</h2>
-    </div>
-
-    <div class="grid grid-4" style="gap: var(--sp-5); margin-top: var(--sp-6);">
-      <% 
-        const coreServices = [
-          { title: 'Commercial Contracting', id: 'commercial-contracting' },
-          { title: 'Compliance & Governance', id: 'compliance-governance' },
-          { title: 'Employment Law & HR Advisory', id: 'employment-hr' },
-          { title: 'Legal Tech & Operations', id: 'legal-tech-ops' },
-          { title: 'Commercial Dispute Management', id: 'dispute-management' },
-          { title: 'Fundraising & M&A Support', id: 'fundraising-ma' },
-          { title: 'IP Portfolio Management', id: 'ip-portfolio' },
-          { title: 'Legal Recruitment', id: 'legal-recruitment' }
-        ];
-        coreServices.forEach((service, idx) => {
-      %>
-        <a href="/services/<%= service.id %>" class="card card-hover-gold" data-reveal data-reveal-delay="<%= (idx % 4) + 1 %>" style="padding: var(--sp-6); text-align: center; display: flex; align-items: center; justify-content: center; min-height: 100px; border-top: 3px solid var(--c-accent-soft); text-decoration: none; transition: all 0.3s var(--ease);">
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--c-text); margin: 0;"><%= service.title %></h3>
-        </a>
-      <% }); %>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="cta-band">
-  <div class="container">
-    <h2 data-reveal>Ready to align your legal operations with your business goals?</h2>
-    <div data-reveal data-reveal-delay="2" style="margin-top: var(--sp-6);">
-      <a href="/contact" class="btn btn-primary">Start the Conversation</a>
-    </div>
-  </div>
-</section>
-
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>
