@@ -27,7 +27,7 @@ app.use(express.json());
 const siteData = {
   site: {
     name: 'Praesentia',
-    fullName: 'Praesentia Legal Solutions',
+    fullName: 'Praesentia Legal LLP',
     tagline: 'Strategic Legal Partners for Growth-Focused Businesses',
     description: 'Embedded fractional General Counsel for founders, executive teams, and growing businesses — bridging the gap between expensive law firms and full-time in-house counsel across the US, India & West Asia.',
     url: 'https://praesentialegal.com',
