@@ -160,13 +160,13 @@ button{font:inherit;cursor:pointer;border:0;background:none}
   opacity: 0.9;
 }
 .brand-logo-rect {
-  height: 218px;
+  height: 283px; /* 1.3x bigger (was 218px) */
   width: auto;
   display: block;
   transition: height .4s var(--ease), transform .3s var(--ease);
 }
 .site-header.scrolled .brand-logo-rect {
-  height: 96px;
+  height: 125px; /* 1.3x bigger (was 96px) */
 }
 .brand-logo-rect:hover {
   transform: scale(1.02);
@@ -318,7 +318,7 @@ button{font:inherit;cursor:pointer;border:0;background:none}
     gap: var(--sp-2);
   }
   .brand-logo-rect-sm {
-    height: 57px;
+    height: 74px; /* 1.3x bigger (was 57px) */
     width: auto;
     display: block;
   }
