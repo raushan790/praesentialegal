@@ -13,7 +13,12 @@
         <% if (typeof submitted !== 'undefined' && submitted) { %>
           <div class="form-success">✓ Thank you — we'll be in touch within one business day.</div>
         <% } %>
-        <form action="/contact" method="POST" autocomplete="on" id="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST" autocomplete="on" id="contact-form">
+          <input type="hidden" name="access_key" value="<%= site.web3formsAccessKey %>">
+          <input type="hidden" name="from_name" value="Praesentia Contact Form">
+          <input type="hidden" name="subject" value="New Contact Form Submission from <%= site.fullName %>">
+          <input type="hidden" name="redirect" value="<%= site.url %>/contact?submitted=true">
+
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>

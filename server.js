@@ -34,7 +34,8 @@ const siteData = {
     email: 'connect@praesentialegal.com',
     linkedin: 'https://www.linkedin.com/company/praesentia-legal/',
     year: new Date().getFullYear(),
-    jurisdictions: ['🇺🇸 United States', '🇮🇳 India', '🕌 West Asia (UAE)']
+    jurisdictions: ['🇺🇸 United States', '🇮🇳 India', '🕌 West Asia (UAE)'],
+    web3formsAccessKey: process.env.WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE'
   },
   nav: [
     { label: 'Home', href: '/' },
@@ -324,7 +325,12 @@ app.get('/services/:serviceId', (req, res) => {
 app.get('/impact', (req, res) => res.render('impact', { title: 'Proven Results' }));
 app.get('/terms', (req, res) => res.render('terms', { title: 'Website Terms of Use' }));
 app.get('/privacy', (req, res) => res.render('privacy', { title: 'Privacy & Cookie Policy' }));
-app.get('/contact', (req, res) => res.render('contact', { title: 'Schedule a Consultation' }));
+app.get('/contact', (req, res) => {
+  res.render('contact', {
+    title: 'Schedule a Consultation',
+    submitted: req.query.submitted === 'true'
+  });
+});
 
 // Contact form submission
 app.post('/contact', (req, res) => {
