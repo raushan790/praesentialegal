@@ -33,14 +33,6 @@
             <input type="text" id="company" name="company" placeholder="Acme Inc.">
           </div>
           <div class="form-group">
-            <label for="interest">Area of Interest</label>
-            <select id="interest" name="interest">
-              <option value="">Select an engagement model…</option>
-              <% services.forEach(s => { %><option><%= s.title %></option><% }); %>
-              <option>Not sure yet — general inquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
             <label for="message">How can we help?</label>
             <textarea id="message" name="message" placeholder="Tell us about your business, your legal needs, and where you're headed…"></textarea>
           </div>

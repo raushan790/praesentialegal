@@ -1,140 +1,184 @@
 <%- include('partials/head', { title: title, description: site.description }) %>
-<%- include('partials/nav') %>
+  <%- include('partials/nav') %>
 
-<!-- ===== HERO ===== -->
-<header class="hero">
-  <div class="hero-bg"></div>
-  <div class="container hero-inner">
-    <h1 data-reveal data-reveal-delay="1">Your internal <span class="hl">legal department</span> — without the overhead of building one.</h1>
-    <p class="hero-lead" data-reveal data-reveal-delay="2">We provide embedded legal leadership for founders, executive teams, and growing businesses — bridging the gap between expensive law firms and full-time in-house counsel. We don't just point out legal risks. We engineer commercial pathways to help you move past them and close deals.</p>
-    <div class="hero-actions" data-reveal data-reveal-delay="3">
-      <a href="/contact" class="btn btn-primary">Schedule a Consultation</a>
-      <a href="/services" class="btn btn-ghost">Explore Services</a>
-    </div>
-
-  </div>
-</header>
-
-<!-- ===== THE CHALLENGE ===== -->
-<section class="section bg-alt">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow center">The Challenge</span>
-      <h2 class="section-title">Growing Businesses Need More Than Outside Counsel</h2>
-      <p class="section-sub" style="margin-left:auto;margin-right:auto">Modern executive teams face a constant trade-off: traditional external counsel is reactive and expensive, while hiring a full-time General Counsel is a major — often premature — overhead commitment.</p>
-    </div>
-    <div class="grid grid-3" style="margin-top:var(--sp-7)">
-      <% const challenges = [
-        {n:'01',i:'⚡',t:'Contracts Slowing Revenue',d:'Commercial contracting bottlenecks slow down your sales cycle and revenue momentum — deal velocity suffers.'},
-        {n:'02',i:'📋',t:'Founder Burden',d:'Founders are heavily burdened by legal decisions and drafting — time that should go to strategy and growth.'},
-        {n:'03',i:'🌍',t:'Cross-Border Risk',d:'Escalating compliance obligations and multi-jurisdiction risks across US, India, UK, UAE and beyond.'},
-        {n:'04',i:'💸',t:'Unpredictable Spend',d:'Exorbitant external law firm spend with hourly billing uncertainty — no predictability, no control.'},
-        {n:'05',i:'🔧',t:'No Internal Processes',d:'Absence of internal legal processes, templates, and operational guardrails — everything built from scratch.'},
-        {n:'06',i:'⚖️',t:'The Architectural Gap',d:'Traditional firms lack business context; a full-time GC is premature. You need strategic leadership + proactive execution.'}
-      ]; challenges.forEach((c, idx) => { %>
-        <div class="card" data-reveal data-reveal-delay="<%= (idx % 3) + 1 %>">
-          <span class="num-tag"><%= c.n %></span>
-          <div class="icon"><%= c.i %></div>
-          <h3><%= c.t %></h3>
-          <p><%= c.d %></p>
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <h1 data-reveal data-reveal-delay="1">Your internal <span class="hl">legal department</span> — without the
+          overhead of building one.</h1>
+        <p class="hero-lead" data-reveal data-reveal-delay="2">We provide embedded legal leadership for founders,
+          executive teams, and growing businesses — bridging the gap between expensive law firms and full-time in-house
+          counsel.</p>
+        <div class="mandate-box" data-reveal data-reveal-delay="2.5">
+          <div class="mandate-tag">Our Mandate</div>
+          <p class="mandate-text">"We don't just point out legal risks. We engineer commercial pathways to help you move
+            past them and close deals."</p>
         </div>
-      <% }); %>
-    </div>
-    <div style="max-width:720px;margin:var(--sp-8) auto 0;text-align:center" data-reveal>
-      <p class="quote-block dark-quote" style="font-size:1.3rem">"Most growth-stage companies need a partner who sits inside the business, not an external desk."</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== THE SOLUTION ===== -->
-<section class="section bg-dark">
-  <div class="container">
-    <div class="section-head center" data-reveal>
-      <span class="eyebrow light center">The Solution</span>
-      <h2 class="section-title">Praesentia Fills The Architectural Gap</h2>
-      <p class="section-sub" style="margin-left:auto;margin-right:auto">We become an extension of your business — aligned to growth, dedicated to velocity.</p>
-    </div>
-    <div class="grid grid-3">
-      <% const solutions = [
-        {i:'🎯',t:'Strategic Legal Leadership',d:'Board-level risk advisory, strategic growth planning, compliance structures, and active litigation management.'},
-        {i:'🤝',t:'Embedded Business Partner',d:'Integrated in your internal channels (Slack, email), sitting on executive boards, and acting as an extension of you.'},
-        {i:'📈',t:'Scalable Support Model',d:'A flexible retainer model that adapts to your transactional volume — eliminating overhead risk.'},
-        {i:'⚙️',t:'Legal Operations Expertise',d:'Standardised playbook implementation, template cleanups, and structured commercial processes.'},
-        {i:'🤖',t:'AI-Enabled Processes',d:'Deploying next-gen AI tools for contract reviews, clause analytics, and rapid workflow routing.'},
-        {i:'🌐',t:'Cross-Border Legal Support',d:'Managing regional expansion and commercial compliance across US, India, UK, UAE and beyond.'}
-      ]; solutions.forEach((s, idx) => { %>
-        <div class="card dark" data-reveal data-reveal-delay="<%= (idx % 3) + 1 %>">
-          <div class="icon"><%= s.i %></div>
-          <h3><%= s.t %></h3>
-          <p><%= s.d %></p>
+        <div class="hero-actions" data-reveal data-reveal-delay="3">
+          <a href="/contact" class="btn btn-primary">Schedule a Consultation</a>
+          <a href="/services" class="btn btn-ghost">Explore Services</a>
         </div>
-      <% }); %>
-    </div>
-  </div>
-</section>
+
+      </div>
+    </header>
+
+    <!-- ===== THE CHALLENGE ===== -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow center">The Challenge</span>
+          <h2 class="section-title">Growing Businesses Need More Than Outside Counsel</h2>
+          <p class="section-sub" style="margin-left:auto;margin-right:auto">Modern executive teams face a constant
+            trade-off: traditional external counsel is reactive and expensive, while hiring a full-time General Counsel
+            is a major — often premature — overhead commitment.</p>
+        </div>
+        <div class="grid grid-3" style="margin-top:var(--sp-7)">
+          <% const challenges = [
+            {n:'01',i:'⚡',t:'Contracts Slowing Revenue',d:'Commercial contracting bottlenecks slow down your sales cycle and revenue momentum — deal velocity suffers.'},
+            {n:'02',i:'📋',t:'Founder Burden',d:'Founders are heavily burdened by legal decisions and drafting — time that should go to strategy and growth.'},
+            {n:'03',i:'🌍',t:'Cross-Border Risk',d:'Escalating compliance obligations and multi-jurisdiction risks across US, India, UK, UAE and beyond.'},
+            {n:'04',i:'💸',t:'Unpredictable Spend',d:'Exorbitant external law firm spend with hourly billing uncertainty — no predictability, no control.'},
+            {n:'05',i:'🔧',t:'No Internal Processes',d:'Absence of internal legal processes, templates, and operational guardrails — everything built from scratch.'},
+            {n:'06',i:'⚖️',t:'The Architectural Gap',d:'Traditional firms lack business context; a full-time GC is premature. You need strategic leadership + proactive execution.'}
+          ]; challenges.forEach((c, idx) => { %>
+            <div class="card" data-reveal data-reveal-delay="<%= (idx % 3) + 1 %>">
+              <span class="num-tag">
+                <%= c.n %>
+              </span>
+              <div class="icon">
+                <%= c.i %>
+              </div>
+              <h3>
+                <%= c.t %>
+              </h3>
+              <p>
+                <%= c.d %>
+              </p>
+            </div>
+            <% }); %>
+        </div>
+        <div style="max-width:720px;margin:var(--sp-8) auto 0;text-align:center" data-reveal>
+          <p class="quote-block dark-quote" style="font-size:1.3rem">"Most growth-stage companies need a partner who
+            sits inside the business, not an external desk."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== THE SOLUTION ===== -->
+    <section class="section bg-dark">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow light center">The Solution</span>
+          <h2 class="section-title">Praesentia Fills The Architectural Gap</h2>
+          <p class="section-sub" style="margin-left:auto;margin-right:auto">We become an extension of your business —
+            aligned to growth, dedicated to velocity.</p>
+        </div>
+        <div class="grid grid-3">
+          <% const solutions = [
+            {i:'🎯',t:'Strategic Legal Leadership',d:'Board-level risk advisory, strategic growth planning, compliance structures, and active litigation management.'},
+            {i:'🤝',t:'Embedded Business Partner',d:'Integrated in your internal channels (Slack, email), sitting on executive boards, and acting as an extension of you.'},
+            {i:'📈',t:'Scalable Support Model',d:'A flexible retainer model that adapts to your transactional volume — eliminating overhead risk.'},
+            {i:'⚙️',t:'Legal Operations Expertise',d:'Standardised playbook implementation, template cleanups, and structured commercial processes.'},
+            {i:'🤖',t:'AI-Enabled Processes',d:'Deploying next-gen AI tools for contract reviews, clause analytics, and rapid workflow routing.'},
+            {i:'🌐',t:'Cross-Border Legal Support',d:'Managing regional expansion and commercial compliance across US, India, UK, UAE and beyond.'}
+          ]; solutions.forEach((s, idx) => { %>
+            <div class="card dark" data-reveal data-reveal-delay="<%= (idx % 3) + 1 %>">
+              <div class="icon">
+                <%= s.i %>
+              </div>
+              <h3>
+                <%= s.t %>
+              </h3>
+              <p>
+                <%= s.d %>
+              </p>
+            </div>
+            <% }); %>
+        </div>
+      </div>
+    </section>
 
 
-<!-- ===== COMPARISON TABLE (PRAESENTIA ADVANTAGE) ===== -->
-<section class="section bg-alt">
-  <div class="container">
-    <div class="result-header" data-reveal>
-      <span class="eyebrow" style="margin-bottom:0; color:var(--c-accent);">The Praesentia Advantage</span>
-    </div>
-    
-    <h2 class="section-title" data-reveal data-reveal-delay="1" style="margin-top: var(--sp-4); margin-bottom: var(--sp-6);">
-      Not Another Law Firm: <span style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent);">A New Operating Paradigm</span>
-    </h2>
-    
-    <div data-reveal data-reveal-delay="2" class="cmp-wrap" style="box-shadow: var(--shadow-lg);">
-      <table class="cmp-table">
-        <thead>
-          <tr>
-            <th>Dimension</th>
-            <th>Traditional Law Firm</th>
-            <th>Internal Legal Team (Full-Time)</th>
-            <th style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); font-weight: 700;">Praesentia Fractional Partner</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% 
-            const compRows = [
-              { dim: 'Engagement Model', trad: 'Matter-based support (reactive ticket desks)', intl: 'High fixed cost, recruitment delays, overhead', praes: 'Flexible engagement, rapid virtual scale-up' },
-              { dim: 'Strategic Execution', trad: 'Reactive, risk-averse legal analysis only', intl: 'Internal capacity limitations, backlog risk', praes: 'Proactive, strategic commercial partner' },
-              { dim: 'Operational Focus', trad: 'Legal-only silo (no process engineering)', intl: 'Internal focus with resource constraints', praes: 'Integrated Legal + Business Operations' },
-              { dim: 'Billing Structure', trad: 'Unpredictable, high-cost hourly billing', intl: 'High full-time salaries and benefits', praes: 'Scalable model, predictable flat-fee retainer' },
-              { dim: 'Tech & Tool Stack', trad: 'Legacy, proprietary software focus', intl: 'Limited budget & training bandwidth', praes: 'AI implementation & CLM expertise' }
-            ];
-            compRows.forEach(r => { 
-          %>
-            <tr>
-              <td data-label="Dimension" style="font-weight: 700;"><%= r.dim %></td>
-              <td data-label="Traditional"><%= r.trad %></td>
-              <td data-label="Internal"><%= r.intl %></td>
-              <td data-label="Praesentia" style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); font-weight: 600;"><%= r.praes %></td>
-            </tr>
-          <% }); %>
-        </tbody>
-      </table>
-    </div>
-    
-    <div style="text-align:center; margin-top:var(--sp-7);" data-reveal>
-      <p class="quote-center" style="font-size:1.30rem; color:var(--c-text); font-family:var(--ff-serif); font-style:italic; font-weight:600;">
-        "Legal support is only part of the solution. Practical execution inside the business creates value."
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- ===== COMPARISON TABLE (PRAESENTIA ADVANTAGE) ===== -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="result-header" data-reveal>
+          <span class="eyebrow" style="margin-bottom:0; color:var(--c-accent);">The Praesentia Advantage</span>
+        </div>
+
+        <h2 class="section-title" data-reveal data-reveal-delay="1"
+          style="margin-top: var(--sp-4); margin-bottom: var(--sp-6);">
+          Not Another Law Firm: <span
+            style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent);">A
+            New Operating Paradigm</span>
+        </h2>
+
+        <div data-reveal data-reveal-delay="2" class="cmp-wrap" style="box-shadow: var(--shadow-lg);">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Traditional Law Firm</th>
+                <th>Internal Legal Team (Full-Time)</th>
+                <th
+                  style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); font-weight: 700;">
+                  Praesentia Fractional Partner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% const compRows=[ { dim: 'Engagement Model' , trad: 'Matter-based support (reactive ticket desks)' ,
+                intl: 'High fixed cost, recruitment delays, overhead' ,
+                praes: 'Flexible engagement, rapid virtual scale-up' }, { dim: 'Strategic Execution' ,
+                trad: 'Reactive, risk-averse legal analysis only' , intl: 'Internal capacity limitations, backlog risk'
+                , praes: 'Proactive, strategic commercial partner' }, { dim: 'Operational Focus' ,
+                trad: 'Legal-only silo (no process engineering)' , intl: 'Internal focus with resource constraints' ,
+                praes: 'Integrated Legal + Business Operations' }, { dim: 'Billing Structure' ,
+                trad: 'Unpredictable, high-cost hourly billing' , intl: 'High full-time salaries and benefits' ,
+                praes: 'Scalable model, predictable flat-fee retainer' }, { dim: 'Tech & Tool Stack' ,
+                trad: 'Legacy, proprietary software focus' , intl: 'Limited budget & training bandwidth' ,
+                praes: 'AI implementation & CLM expertise' } ]; compRows.forEach(r=> {
+                %>
+                <tr>
+                  <td data-label="Dimension" style="font-weight: 700;">
+                    <%= r.dim %>
+                  </td>
+                  <td data-label="Traditional">
+                    <%= r.trad %>
+                  </td>
+                  <td data-label="Internal">
+                    <%= r.intl %>
+                  </td>
+                  <td data-label="Praesentia"
+                    style="background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--c-accent); font-weight: 600;">
+                    <%= r.praes %>
+                  </td>
+                </tr>
+                <% }); %>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="text-align:center; margin-top:var(--sp-7);" data-reveal>
+          <p class="quote-center"
+            style="font-size:1.30rem; color:var(--c-text); font-family:var(--ff-serif); font-style:italic; font-weight:600;">
+            "Legal support is only part of the solution. Practical execution inside the business creates value."
+          </p>
+        </div>
+      </div>
+    </section>
 
 
 
-<!-- ===== CTA BAND ===== -->
-<section class="cta-band">
-  <div class="container">
-    <p class="quote-block" data-reveal>"We don't just point out legal risks. We engineer commercial pathways to help you move past them and close deals."</p>
-    <div data-reveal data-reveal-delay="2" style="margin-top:var(--sp-6)">
-      <a href="/contact" class="btn btn-primary">Start the Conversation</a>
-    </div>
-  </div>
-</section>
+    <!-- ===== CTA BAND ===== -->
+    <section class="cta-band">
+      <div class="container">
+        <p class="quote-block" data-reveal>"We don't just point out legal risks. We engineer commercial pathways to help
+          you move past them and close deals."</p>
+        <div data-reveal data-reveal-delay="2" style="margin-top:var(--sp-6)">
+          <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+        </div>
+      </div>
+    </section>
 
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>

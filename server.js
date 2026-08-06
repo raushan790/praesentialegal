@@ -32,7 +32,7 @@ const siteData = {
     description: 'Embedded fractional General Counsel for founders, executive teams, and growing businesses — bridging the gap between expensive law firms and full-time in-house counsel across the US, India & West Asia.',
     url: 'https://praesentialegal.com',
     email: 'connect@praesentialegal.com',
-    linkedin: 'https://www.linkedin.com',
+    linkedin: 'https://www.linkedin.com/company/praesentia-legal/',
     year: new Date().getFullYear(),
     jurisdictions: ['🇺🇸 United States', '🇮🇳 India', '🕌 West Asia (UAE)']
   },
@@ -322,13 +322,15 @@ app.get('/services/:serviceId', (req, res) => {
   res.render('service-detail', { title: service.title, service: service });
 });
 app.get('/impact', (req, res) => res.render('impact', { title: 'Proven Results' }));
+app.get('/terms', (req, res) => res.render('terms', { title: 'Website Terms of Use' }));
+app.get('/privacy', (req, res) => res.render('privacy', { title: 'Privacy & Cookie Policy' }));
 app.get('/contact', (req, res) => res.render('contact', { title: 'Schedule a Consultation' }));
 
 // Contact form submission
 app.post('/contact', (req, res) => {
-  const { fname, lname, email, company, interest, message } = req.body;
+  const { fname, lname, email, company, message } = req.body;
   // In production: integrate with email service / CRM here
-  console.log('Contact form submission:', { fname, lname, email, company, interest });
+  console.log('Contact form submission:', { fname, lname, email, company, message });
   res.render('contact', { title: 'Schedule a Consultation', submitted: true });
 });
 
