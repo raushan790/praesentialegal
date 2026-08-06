@@ -990,3 +990,18 @@ button{font:inherit;cursor:pointer;border:0;background:none}
   border-top: 1px solid var(--c-line);
   line-height: 1.6;
 }
+
+/* ---------- Legal Content Lists ---------- */
+.legal-content ul {
+  list-style-type: disc !important;
+  display: block !important;
+  padding-left: var(--sp-6) !important;
+  margin-top: var(--sp-3) !important;
+  margin-bottom: var(--sp-4) !important;
+}
+.legal-content ul li {
+  display: list-item !important;
+  list-style-type: disc !important;
+  margin-bottom: var(--sp-2) !important;
+  color: var(--c-text-soft) !important;
+}
