@@ -35,7 +35,7 @@ const siteData = {
     linkedin: 'https://www.linkedin.com/company/praesentia-legal/',
     year: new Date().getFullYear(),
     jurisdictions: ['🇺🇸 United States', '🇮🇳 India', '🕌 West Asia (UAE)'],
-    web3formsAccessKey: process.env.WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE'
+    web3formsAccessKey: process.env.WEB3FORMS_ACCESS_KEY || '4e64ec06-cf71-48a8-9f95-d467d9ae2e05'
   },
   nav: [
     { label: 'Home', href: '/' },
