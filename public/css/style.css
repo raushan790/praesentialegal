@@ -553,7 +553,7 @@ button{font:inherit;cursor:pointer;border:0;background:none}
 }
 .footer-top {
   display: grid;
-  grid-template-columns: 2.4fr 1fr 1.6fr;
+  grid-template-columns: 2.4fr 1fr 1fr 1.6fr;
   gap: var(--sp-8);
   padding-bottom: var(--sp-7);
   border-bottom: 1px solid var(--c-line-dark);
